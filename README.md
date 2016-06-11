@@ -1,4 +1,4 @@
-# Loftshool builder
+# Loftshool portfolio
 
 Getting started:
 
