@@ -8,6 +8,7 @@ global.$ = {
     template: require('./gulp/paths/template.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
+    svgpath: require('./gulp/paths/svgpath.js'),
     app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
