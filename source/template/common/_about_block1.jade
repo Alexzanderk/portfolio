@@ -1,15 +1,8 @@
 #block_1
 	header
-		ul.head_social
-			li
-				a(href="#" class="fa fa-vk")
-			li
-				a(href="#" class="fa fa-github-alt")
-			li
-				a(href="#" class="fa fa-linkedin")
+		+social('socials', ['vk', 'github-alt', 'linkedin'])
 		.head_menu
-			a(href="#")
-				i.fa.fa-bars
+			a(href="#" class="fa fa-bars")
 		.clearfix
 	section.head_block
 		.head_block_photo
