@@ -12,6 +12,7 @@
 		.left_side_title
 			width: $left-side-container
 			margin: 10px auto 35px
+			position: relative
 			h1
 				color: #373e42
 				font-family: Roboto-Regular
@@ -27,9 +28,18 @@
 					content: ''
 					position: absolute
 					bottom: 0
-					left: 41%
+					left: calc(50% - 45px)
 					width: 90px
 					border-bottom: 3px solid #373e42
+			.svg__about_header
+				fill: #93c42e
+				opacity: .1
+				position: absolute
+				top: 30%
+				left: 50%
+				transform: translate(-50%,-50%)
+				z-index: 2
+				width: 80%
 		.left_side_photo
 			max-width: $left-side-container
 			width: 500px
@@ -59,7 +69,7 @@
 					position: absolute
 					bottom: 0
 					width: 90px
-					left: 41%
+					left: calc(50% - 45px)
 					border-bottom: 3px solid #566358
 			p
 				padding: 18px 0 5px
@@ -94,7 +104,7 @@
 						position: absolute
 						bottom: 0
 						width: 90px
-						left: 30%
+						left: calc(50% - 45px)
 						border-bottom: 3px solid #566358
 		.right_side_info
 			margin: auto

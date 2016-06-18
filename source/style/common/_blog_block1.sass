@@ -17,7 +17,7 @@
 
 
 
-#block_1
+#blog__block__1
 	position: relative
 	background-image: url(../img/bg.jpg) 
 	background-repeat: no-repeat
@@ -51,7 +51,7 @@
 					color: $link-hover
 	section.head_block
 		padding: 50px 0 0
-		background: url(../img/portfolio_header.svg) no-repeat center
+		// background: url(../img/blog_header.svg) no-repeat center
 		text-align: center
 		.head_block_photo
 			.photo_frame
@@ -64,18 +64,39 @@
 					width: 150px
 					text-align: center
 		.head_block_name
+			position: relative
 			h2
-				font-family: $text-font-h2
-				font-size: 35px
-				font-weight: 500
 				color: #fff
-				margin: 0
-				padding: 30px 0 14px
+				font-family: roboto-regular
+				font-size: 63px
+				font-weight: 700
+				line-height: 56px
+				text-transform: uppercase
+				padding-bottom: 30px
+				position: relative
+				margin: 30px
+				&:after
+					content: ''
+					position: absolute
+					width: 90px
+					bottom: 0
+					left: calc(50% - 45px)
+					border: 3px solid #fff
+			.svg__blog_header
+				fill: #fff
+				opacity: .12
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				width: 30%
+				transform: translate(-50%,-50%)
 			p
-				font-family: $text-font-p
 				color: #fff
+				font-family: roboto-regular
 				font-size: 16px
-				margin: 0 0 60px
+				font-weight: 400
+				line-height: 24px
 	section.head_footer
 		position: absolute
 		bottom: 0
@@ -99,10 +120,10 @@
 			svg
 				z-index: 2
 				position: absolute
-				bottom: -4px
+				bottom: 0px
 				left: 0
 				right: 0
 				polygon.left_side_footer
-					fill: #ebefe2
+					fill: #faf8f0
 				polygon.right_side_footer
-					fill: #f4f5f0
+					fill: #faf8f0

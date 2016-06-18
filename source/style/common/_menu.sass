@@ -1,4 +1,4 @@
-#modal.modal
+#modal
 	width: 100vw
 	height: 100vh
 	position: fixed
@@ -10,29 +10,27 @@
 	z-index: 100
 	.modal__content
 		margin: auto
-		a
-			display: block
-			text-decoration: none
-			color: white
-			font-family: SansusWebissimo
-			font-size: 63px
-			font-weight: 400
-			line-height: 24px
-			text-transform: uppercase
+		.menu__btn
+			float: right
+			padding: 36px	47px
+			a
+				display: inline-block
+				text-decoration: none
+				color: white
+				font-family: SansusWebissimo
+				font-size: 47px
+				font-weight: 400
+				line-height: 24px
+				text-transform: uppercase
 		nav.navi
-			margin: auto
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			vertical-align: middle
+			display: flex
 			div.navi__container
+				margin: auto
 				ul.navi__list
 					list-style: none
-					display: flex
-					flex-flow: column
-					justify-content: center
+					// display: flex
+					// flex-flow: column
+					// justify-content: center
 					li.navi__item
 						position: relative
 						a

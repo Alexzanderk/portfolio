@@ -1,21 +1,15 @@
 $link-hover: #4e8839
-$text-font-h2: Roboto-Regular
-$text-font-p: Roboto-Regular
+$text-font-h2: roboto-regular
+$text-font-p: roboto-regular
 
 /* Response About */
 $left-side-container: 67%
 $right-side-container: 90%
 
 
-@font-face
-	font-family: Sansus-Webissimo-Regular
-	src: url(../fonts/Sansus-Webissimo-Regular.ttf)
-	font-family: Roboto-Light
-	src: url(../fonts/Roboto-Light.ttf)
-	font-family: Roboto-Medium
-	src: url(../fonts/Roboto-Medium.ttf)
-	font-family: Roboto-Regular
-	src: url(../fonts/Roboto-Regular.ttf)
+@import ../../bower_components/singularity/stylesheets/_singularitygs
+
+@import common/_fonts
 
 .clearfix:before,
 .clearfix:after
@@ -25,11 +19,20 @@ $right-side-container: 90%
 .clearfix:after
 	clear: both
 
+body
+	position: relative
+
+
 // @import _welcome.sass
-@import common/_head_site_about
-@import common/_head_site_about2
-@import common/_head_site_about3
+// @import common/_head_site_about
+// @import common/_head_site_about2
+// @import common/_head_site_about3
+// @import common/_menu
+// @import common/_blog_block1
+// @import common/_blog_block2
+@import common/_work_block1
+@import common/_work_block2
+@import common/_work_block3
 @import common/_footer
-@import common/_menu
 
 

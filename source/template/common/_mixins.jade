@@ -14,3 +14,36 @@ mixin social (className, items)
 			each soc in items
 				li(class="#{className}__item")
 					a(href="#" class="#{className}__link fa fa-#{soc}")
+
+
+
+mixin articlelist (className, items, activeItem)
+	div(class="#{className}")
+		ul(class="#{className}__list")
+			each list, numb in items
+				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item_active' : ''))
+					a(href="#" class="#{className}__link")= list
+
+mixin review (src, txt, aut, prof)
+	.reviews__item
+		.reviews__item__photo
+			img(src=src, alt="author photo")
+		.reviews__item__review
+			p=txt
+			svg.svg__quote(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+				use.svg__icon(xlink:href= "assets/img/sprite.svg#quote")
+		.reviews__item__author
+			p= aut
+				br 
+				span=prof
+
+
+mixin articles(idName, title, date, content)
+	article(id="#{idName}" class="article__item")
+		div(class="article__item__title")
+			h3=title
+		div(class="article__item__date")
+			p=date
+		div(class="article__item__content")
+			each cont, tag in content
+				#{cont[0]} #{cont[1]}
