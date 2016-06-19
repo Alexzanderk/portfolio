@@ -47,3 +47,12 @@ mixin articles(idName, title, date, content)
 		div(class="article__item__content")
 			each cont, tag in content
 				#{cont[0]} #{cont[1]}
+
+
+mixin hamburg
+	.head_menu
+			a(href="#" class="fa fa-bars")
+
+mixin tringl
+	svg.svg__arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+		use.svg__icon(xlink:href= "assets/img/sprite.svg#arrow_down")
