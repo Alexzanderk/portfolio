@@ -1,19 +1,19 @@
-#block_3
+.contact__information
 	.map_container
-		iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81296.74616517058!2d30.560843500683585!3d50.44997902880942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1466024574587', frameborder='0', style='border:0', allowfullscreen='')
-	.contakt
+		iframe.map__frame(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d81296.74616517058!2d30.560843500683585!3d50.44997902880942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1466024574587', frameborder='0', allowfullscreen='')
+	.contact__container
 		.contact__title
-			h2 Контакты
+			h2.title__h2__dark Контакты
 		ul.contact__list
-			li.contact_item
-				i.fa.fa-skype
-				span Alexzanderk
-			li.contact_item
-				i.fa.fa-envelope
-				span kotsarev.a@icloud.com
-			li.contact_item
-				i.fa.fa-phone
-				span +38-xxx-xxx-xx-xx
-			li.contact_item
-				i.fa.fa-map-marker
-				span Kiev city
+			li.contact__item
+				i.contact__icon.fa.fa-skype
+				a.contact__link(href="skype:alexzanderk?add") Alexzanderk
+			li.contact__item
+				i.contact__icon.fa.fa-envelope
+				a.contact__link(href="mailto: kotsarev.a@gmail.com.com") kotsarev.a@gmail.com
+			li.contact__item
+				i.contact__icon.fa.fa-phone
+				a.contact__link(href="tel:+380674302151") +38-067-430-21-51
+			li.contact__item
+				i.contact__icon.fa.fa-map-marker
+				span.contact__span Kiev city

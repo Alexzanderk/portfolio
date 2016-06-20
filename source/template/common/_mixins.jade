@@ -1,3 +1,4 @@
+//- Навигация 
 mixin navigation (className, items, activeItem)
 	nav(class="#{className}")
 		div(class="#{className}__container")
@@ -5,6 +6,25 @@ mixin navigation (className, items, activeItem)
 				each nav, ndx in items
 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
 						a(href="#" class="#{className}__link")= nav
+
+//- Навигация с сылками
+mixin navi_link (className, items, activeItem)
+	nav(class="#{className}")
+		div(class="#{className}__container")
+			ul(class="#{className}__list")
+				each link, nav in items
+					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+						a(href="#{link}" class="#{className}__link")= nav
+//- Пробный вариант
+mixin navi_links (className, items, activeItem)
+	nav(class="#{className}")
+		div(class="#{className}__container")
+			ul(class="#{className}__list")
+				each link, nav in items
+					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+						a(href="#{link}" class="#{className}__link")= nav
+
+
 
 
 
@@ -27,26 +47,26 @@ mixin articlelist (className, items, activeItem)
 mixin review (src, txt, aut, prof)
 	.reviews__item
 		.reviews__item__photo
-			img(src=src, alt="author photo")
+			img.review__photo(src=src, alt="author photo")
 		.reviews__item__review
-			p=txt
+			p.review__comment=txt
 			svg.svg__quote(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#quote")
 		.reviews__item__author
-			p= aut
+			p.review__author= aut
 				br 
-				span=prof
+				span.review__author__prof=prof
 
 
 mixin articles(idName, title, date, content)
 	article(id="#{idName}" class="article__item")
 		div(class="article__item__title")
-			h3=title
+			h3.title__h3=title
 		div(class="article__item__date")
-			p=date
+			p.date__text=date
 		div(class="article__item__content")
 			each cont, tag in content
-				#{cont[0]} #{cont[1]}
+				#{cont[0]}.article__text #{cont[1]}
 
 
 mixin hamburg

@@ -1,12 +1,13 @@
 footer.footer
-	.footer__container
-		.left__side
-			p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-		.center__side
-			+navigation('navigation', ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'], '1')
-			+social('socials_down', ['vk', 'github-alt', 'linkedin'])
-		.right__side
-			p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+	.footer__container__up
+		.footer__left__side
+			p.footer__left__side__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+		.footer__center__side
+			.shape__container
+				+navi_link('footer__navigation', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html', 'Авторизация' : 'index.html'})
+				+social('footer__socials', ['vk', 'github-alt', 'linkedin'])
+		.footer__right__side
+			p.footer__right__side__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
 				br
-				span — Martin Golding
-	.footer__down &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016
+				span.footer__right__side__text_bold — Martin Golding
+	.footer__container__down &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016

@@ -1,22 +1,20 @@
-#work__block1
-	header
-		+social('socials', ['vk', 'github-alt', 'linkedin'])
-		+hamburg
-		.clearfix
-	section.head_block
-		.head_block_photo
-			.photo_frame
-				img(src="/assets/img/me.jpg", alt="My Photo")
-		.head_block_name
-			h2 Коцарев Александр
-			p Личный сайт веб разработчика
-	section.head_footer
-		.head_footer_arrow_down
-			a(href="#")
+.head__wrapper
+	.tringl__down__container
+		header.header__container.clearfix
+			+social('socials', ['vk', 'github-alt', 'linkedin'])
+			+hamburg
+		section.about__author.about__author_bg
+			.author__photo__container
+				.author__photo__frame
+					img.author__main__photo(src="/assets/img/me.jpg", alt="My Photo")
+			.author__name
+				h2.title__h2 Коцарев Александр
+				p.title__text Личный сайт веб разработчика
+	section.head__side__down
+		.arrow__down__container
+			a.arrow__down__link(href="#")
 				+tringl
-				//- svg(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25.18px" height="16.164px" viewBox="0 0 25.18 16.164" enable-background="new 0 0 25.18 16.164" xml:space="preserve")
-				//- 	path(d="M13.293,15.871c-0.391,0.391-1.016,0.391-1.406,0L0.293,4.293c-0.391-0.391-0.391-1.031,0-1.422 l2.594-2.578c0.391-0.391,1.016-0.391,1.406,0L12.59,8.59l8.297-8.297c0.391-0.391,1.016-0.391,1.406,0l2.594,2.578 c0.391,0.391,0.391,1.031,0,1.422L13.293,15.871z")
-		.head_footer_tr
-			svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
-				polygon(class="left_side_footer" points="0,0 0,86 500.8,86 500.8,75.5")
-				polygon(class="right_side_footer" points="1000,0 1000,86 500,86 500,75.5")
+		.head__footer__tr
+			svg.svg__tringls(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+				polygon(class="left__side__footer_work" points="0,0 0,86 500.8,86 500.8,75.5")
+				polygon(class="right__side__footer_work" points="1000,0 1000,86 500,86 500,75.5")

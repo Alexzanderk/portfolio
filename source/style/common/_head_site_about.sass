@@ -1,108 +1,68 @@
-.socials
-	ul.socials__list
-		float: left
-		padding: 0
-		margin: 0
-		li.socials__item
-			list-style: none	
-			display: inline-block
-			a.socials__link
-				text-decoration: none
-				display: inline-block
-				font-size: 27px
-				color: #fff
-				margin: 0 13.5px
-				&:hover
-					color: $link-hover
-
-
-
-#block_1
+.head__wrapper
 	position: relative
 	background-image: url(../img/bg.jpg) 
 	background-repeat: no-repeat
 	background-size: cover 
 	height: 100vh
-	header
-		padding: 37px 30px 50px
-		// ul.head_social
-		// 	float: left
-		// 	padding: 0
-		// 	margin: 0
-		// 	li
-		// 		list-style: none	
-		// 		display: inline-block
-		// 		a
-		// 			text-decoration: none
-		// 			display: inline-block
-		// 			font-size: 27px
-		// 			color: #fff
-		// 			margin: 0 13.5px
-		// 			&:hover
-		// 				color: $link-hover
-		.head_menu
-			float: right
-			a
-				text-decoration: none
-				display: inline-block
-				font-size: 44px
-				color: #fff
-				&:hover
-					color: $link-hover
-	section.head_block
-		padding: 50px 0 0
-		background: url(../img/portfolio_header.svg) no-repeat center
-		text-align: center
-		.head_block_photo
-			.photo_frame
-				width: 140px
-				height: 140px
-				border-radius: 50%
-				overflow: hidden
-				margin: auto
-				img
-					width: 150px
-					text-align: center
-		.head_block_name
-			h2
-				font-family: $text-font-h2
-				font-size: 35px
-				font-weight: 500
-				color: #fff
-				margin: 0
-				padding: 30px 0 14px
-			p
-				font-family: $text-font-p
-				color: #fff
-				font-size: 16px
-				margin: 0 0 60px
-	section.head_footer
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
-		.head_footer_arrow_down
-			position: absolute
-			bottom: 100px
-			left: 0
-			right: 0
-			z-index: 10
-			margin: auto
-			a
-				color: #fff
-				svg
-					display: block
-					margin: auto 
-					fill: rgba(255,255,255,.7)
-		.head_footer_tr
-			z-index: 5
-			svg
-				z-index: 2
-				position: absolute
-				bottom: -4px
-				left: 0
-				right: 0
-				polygon.left_side_footer
-					fill: #ebefe2
-				polygon.right_side_footer
-					fill: #f4f5f0
+.tringl__down__container
+	min-height: 100%
+	margin-bottom: -130px
+	&:after
+		content: ''
+		display: block
+		height: 130px
+.header__container
+	padding: 37px 30px 50px
+.head_menu
+	float: right
+	a
+		text-decoration: none
+		display: inline-block
+		font-size: 44px
+		color: #fff
+		&:hover
+			color: $link-hover
+.about__author_bg
+	padding: 50px 0 0
+	background: url(../img/portfolio_header.svg) no-repeat center
+	text-align: center
+.author__photo__container
+.author__photo__frame
+	width: 140px
+	height: 140px
+	border-radius: 50%
+	overflow: hidden
+	margin: auto
+.author__main__photo
+	width: 150px
+	text-align: center
+.author__name
+	padding-top: 25px
+
+.head__side__down
+	position: relative
+	min-height: 130px
+.arrow__down__container
+	position: absolute
+	bottom: 85px
+	left: 0
+	right: 0
+	z-index: 90
+	margin: auto
+.arrow__down__link
+	color: #fff
+.svg__arrow_down
+	margin: auto 
+	fill: rgba(255,255,255,.7)
+.head__footer__tr
+	z-index: 5
+.svg__tringls
+	z-index: 2
+	position: absolute
+	bottom: 0px
+	left: 0
+	right: 0
+	polygon.left__side__footer
+		fill: #ebefe2
+	polygon.right__side__footer
+		fill: #f4f5f0

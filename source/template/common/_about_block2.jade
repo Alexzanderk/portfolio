@@ -1,25 +1,63 @@
-#block_2
-	section.left_side
-		.left_side_title
-			h1 Обо мне
+.main__content__container
+	
+
+	section.left__side
+		.left__side__title
+			h1.title__h1__dark Обо мне
 			svg.svg__about_header(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#about_header")
-		.left_side_photo
-			img(src="../assets/img/me_about.jpg", alt="me")
-		.left_side_about_me
-			h3 Кто я
-			p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
-			p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+		.left__side__photo__frame
+			img.left__side__photo(src="../assets/img/me_about.jpg", alt="me")
+		.left__side__about__me
+			h3.title__h3__dark Кто я
+			p.text__p_about Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
+			p.text__p_about Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+	
+
+
 	section.right_side
 		.right_side_title
 			.right_side_title_container
-				h2 Чем я могу быть вам полезен
+				h3.title__h3__dark Чем я могу быть вам полезен
 		.right_side_info
-			p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-		ul.right_side_diagrams
-			li.title.frontend
-				h4 Frontend
+			p.text__p_about Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+		ul.right__side__diagrams
+			li.diagram__title.frontend
+				h4.title__skill Frontend
+				ul.diagram__list
+					li.diagram__item
+						input.dial(type="text" value="90")
+						.skill__name HTML5
+					li.diagram__item
+						input.dial(type="text" value="75")
+						.skill__name CSS3
+					li.diagram__item
+						input.dial(type="text" value="65")
+						.skill__name JavaScript & jQuery
 			li.title.backend 
-				h4 Backend
+				h4.title__skill Backend
+				ul.diagram__list.disable
+					li.diagram__item
+						input.dial(type="text" value="5")
+						.skill__name PHP
+					li.diagram__item
+						input.dial(type="text" value="0")
+						.skill__name mySQL
+					li.diagram__item
+						input.dial(type="text" value="15")
+						.skill__name Node.js & npm
+					li.diagram__item
+						input.dial(type="text" value="0")
+						.skill__name Mongo.db
 			li.title.workflow 
-				h4 WorkFlow
+				h4.title__skill WorkFlow
+				ul.diagram__list
+					li.diagram__item
+						input.dial(type="text" value="85")
+						.skill__name Git
+					li.diagram__item
+						input.dial(type="text" value="95")
+						.skill__name Gulp
+					li.diagram__item
+						input.dial(type="text" value="100")
+						.skill__name Bower

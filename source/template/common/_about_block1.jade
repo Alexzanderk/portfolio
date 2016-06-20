@@ -1,20 +1,20 @@
-#block_1
-	header
-		+social('socials', ['vk', 'github-alt', 'linkedin'])
-		+hamburg
-		.clearfix
-	section.head_block
-		.head_block_photo
-			.photo_frame
-				img(src="/assets/img/me.jpg", alt="My Photo")
-		.head_block_name
-			h2 Коцарев Александр
-			p Личный сайт веб разработчика
-	section.head_footer
-		.head_footer_arrow_down
-			a(href="#")
+.head__wrapper
+	.tringl__down__container
+		header.header__container.clearfix
+			+social('socials', ['vk', 'github-alt', 'linkedin'])
+			+hamburg
+		section.about__author.about__author_bg
+			.author__photo__container
+				.author__photo__frame
+					img.author__main__photo(src="/assets/img/me.jpg", alt="My Photo")
+			.author__name
+				h2.title__h2 Коцарев Александр
+				p.title__text Личный сайт веб разработчика
+	section.head__side__down
+		.arrow__down__container
+			a.arrow__down__link(href="#")
 				+tringl
-		.head_footer_tr
-			svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
-				polygon(class="left_side_footer" points="0,0 0,86 500.8,86 500.8,75.5")
-				polygon(class="right_side_footer" points="1000,0 1000,86 500,86 500,75.5")
+		.head__footer__tr
+			svg.svg__tringls(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+				polygon(class="left__side__footer" points="0,0 0,86 500.8,86 500.8,75.5")
+				polygon(class="right__side__footer" points="1000,0 1000,86 500,86 500,75.5")

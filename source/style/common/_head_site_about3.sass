@@ -1,57 +1,71 @@
-#block_3
+.contact__information
 	position: relative
-	.map_container
-		width: 100%
-		iframe
-			height: 120vh
-			width: 100%
-	.contakt
-		min-width: 350px
-		min-height: 300px
-		background: rgba(#f4f5f0, .85)
+// .map_container
+	// width: 100%
+.map__frame
+	width: 100%
+	height: calc(100vh + 200px)
+.contact__container
+	width: 380px
+	background: rgba(#f4f5f0, .85)
+	position: absolute
+	top: 40%
+	left: 50%
+	transform: translate(-50%,-50%)
+	border-radius: 5px
+.contact__title
+.title__h2__dark
+	color: #566358
+	font-family: SansusWebissimo
+	font-size: 35px
+	font-weight: 400
+	line-height: 41px
+	text-transform: uppercase
+	text-align: center
+	position: relative
+	margin: 0
+	margin-bottom: 36px
+	margin-top: 36px
+	padding-bottom: 25px
+	&:after
+		content: ''
 		position: absolute
-		top: calc(50% - 150px)
-		left: calc(50% - 175px)
-		padding: 15px
-		border-radius: 5px
-		.contact__title
-			
-			h2
-				color: #566358
-				font-family: SansusWebissimo
-				font-size: 35px
-				font-weight: 400
-				line-height: 41px
-				text-transform: uppercase
-				position: relative
-				text-align: center
-				padding-bottom: 29px
-				&:after
-					content: ''
-					position: absolute
-					bottom: 0
-					left: calc(50% - 45px)
-					width: 90px
-					border-bottom: 3px solid #566358
-		ul.contact__list
-			margin: 0
-			padding: 0
-			li.contact_item
-				list-style: none
-				padding: 5px 20px
-				margin: 10px
-				&:first-child
-					margin-top: 0
-					padding-top: 0
-				i.fa
-					color: #6c9c5a
-					padding-right: 10px
-					font-size: 20px
-					display: inline-block
-				span
-					display: inline-block
-					color: #566358
-					font-family: Roboto-Regular
-					font-size: 16px
-					font-weight: 500
-					line-height: 24px
+		bottom: 0
+		left: calc(50% - 45px)
+		width: 90px
+		border-bottom: 3px solid #566358
+
+
+.contact__list
+	margin: 0
+	padding: 0
+.contact__item
+	list-style: none
+	padding: 10px 0
+	padding-left: 40px
+	padding-right: 10px
+	display: flex
+	&:first-child
+		margin-top: 0
+		padding-top: 0
+	&:last-child
+		margin-bottom: 25px
+.contact__icon
+	color: #6c9c5a
+	padding-right: 15px
+	font-size: 25px
+	display: inline-block
+.contact__span
+	display: inline-block
+	color: #566358
+	font-family: Roboto-Regular
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px
+.contact__link
+	text-decoration: none
+	color: rgba(#455a64, .8)
+	font-family: Roboto-regular
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px

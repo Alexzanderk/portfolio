@@ -1,7 +1,7 @@
-#work__block3.reviews
+.reviews
 	.reviews_container
 		.reviews__title
-			h2 Что обо мне говорят
+			h1.title__h1__review Что обо мне говорят
 			svg.svg__about_header(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#about_header")
 		.reviews__list
@@ -9,15 +9,14 @@
 			+review('assets/img/aut2.jpg', 'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'Зар Захаров', '— главный преподаватель')
 		.contact__with__me
 			.contact__with__me__title
-				h4 Связаться со мной
+				h2.title__h2__review Связаться со мной
 			.contact__with__me__form
 				form.contact__form
 					input(type="text" placeholder="Имя" class="form__name")
 					input(type="email" placeholder="Email" class="form__mail")
 					textarea(name="", cols="30", rows="5" placeholder="Ваше сообщение" class="form__text")
-			.contact__with__me__btn
-				input(type="submit" class="btn__review")
-				input(type="reset" class="btn__review")
+					input(type="submit" class="btn__review")
+					input(type="reset" class="btn__review")
 		a(href="#")
 			svg.svg__portf_arrow_up_icon(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 	171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")

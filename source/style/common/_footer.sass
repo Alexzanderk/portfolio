@@ -1,93 +1,102 @@
-footer.footer
+.footer
+	width: 100%
 	background-color: rgba(#373e42, .85)
-	height: 150px
-	z-index: 50
 	position: absolute
 	bottom: 0
 	left: 0
+	display: flex
+	flex-flow: row wrap
+
+.footer__container__up
 	width: 100%
-	.footer__container
-		display: flex
-		// justify-content: center
-		.left__side
-			width: 33.33%
-			margin: 20px
-			p
-				display: block
-				margin: auto
-				color: rgba(#fff, .5)
-				font-family: roboto-regular
-				font-size: 16px
-				font-weight: 100
-				line-height: 24px
-				margin: 0
-		.center__side
-			margin: 20px 0
-			padding: 0 20px
-			width: 33.33%
-			border-right: 1px solid #373e42
-			border-left: 1px solid #373e42
-		nav.navigation
-			display: block
-			margin: auto
-			.navigation__container
-				margin: auto
-				ul.navigation__list
-					list-style: none
-					padding: 0
-					margin: 0
-					li.navigation__item
-						padding: 0 10px
-						display: inline-block
-						a.navigation__link
-							text-decoration: none
-							color: white
-							font-family: roboto-regular
-							font-size: 16px
-							font-weight: 500
-							line-height: 24px
-							&:hover
-								opacity: .7		
-		div.socials_down
-			margin: auto
-			padding: 30px 0 29px
-			ul.socials_down__list
-				list-style: none
-				padding: 0
-				margin: 0
-				li.socials_down__item
-					display: inline-block
-					a.socials_down__link
-						text-decoration: none
-						display: inline-block
-						font-size: 27px
-						color: rgba(#fff, .5)
-						margin: 0 13.5px
-						&:hover
-							color: #fff
-		
-		.right__side
-			width: 33.33%
-			margin: 20px
-			p
-				display: block
-				margin: auto
-				color: rgba(#fff, .5)
-				font-family: roboto-regular
-				font-size: 16px
-				line-height: 26px
-				font-weight: 300
-				font-style: italic
-				margin: 0
-				span
-					font-weight: 700
-					font-style: italic
-	.footer__down
-		background: #6c9c5a
-		opacity: .85
-		height: 38px
-		line-height: 38px
-		color: #fff
-		text-align: center
-		font-family: roboto-regular
-		font-weight: 300
+	display: flex
+	justify-content: space-between
+
+/* LEFT BLOCK */
+.footer__left__side
+	flex: 0 2 auto
+	margin: 30px 0 20px
+.footer__left__side__text
+	color: #fff
+	font-family: Roboto-regular
+	font-size: 16px
+	font-weight: 300
+	line-height: 24px
+	padding-left: 30px
+	margin: 0
+/* CENTER BLOCK */
+.footer__center__side
+	flex: 1 0 auto
+	margin: 30px 0 20px
+.shape__container
+	border-left: 1px solid rgba(#FFF, .2)
+	border-right: 1px solid rgba(#FFF, .2)
+	
+.footer__navigation
+.footer__navigation__container
+.footer__navigation__list
+	padding: 0
+	margin: 0
+	list-style: none
+.footer__navigation__item
+	display: inline-block
+	padding: 0 9.5px
+	&:first-child
+		padding-left: 30px
+	&:last-child
+		padding-right: 28px
+.footer__navigation__link
+	text-decoration: none
+	color: #fff
+	font-family: Roboto-regular
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px
+	text-align: center
+	&:hover
+		text-decoration: underline
+		opacity: .5
+.footer__socials
+.footer__socials__list
+	padding: 0
+	margin: 0
+	list-style: none
+.footer__socials__item
+	display: inline-block
+	padding: 20px 10px 25px
+	&:first-child
+		padding-left: 30px
+.footer__socials__link
+	text-decoration: none
+	opacity: 0.5
+	color: #FFF
+	font-size: 25px
+	&:hover
+		opacity: 1
+
+/* RIGHT BLOCK */
+.footer__right__side
+	flex: 0 3 auto
+	margin: 30px 0 20px
+.footer__right__side__text
+	color: rgba(#fff, .5)
+	box-sizing: border-box
+	font-family: Roboto-regular
+	font-size: 16px
+	line-height: 26px
+	font-weight: 300
+	font-style: italic
+	padding: 0px 50px 0 30px
+	margin: 0
+.footer__right__side__text_bold
+	font-weight: 700
+
+.footer__container__down
+	width: 100%
+	background-color: rgba(#6c9c5a, .85)
+	color: #fff
+	font-family: Roboto-regular
+	text-align: center
+	font-size: 16px
+	font-weight: 300
+	line-height: 38px
