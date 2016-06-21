@@ -4,6 +4,7 @@
 	background-position: center
 	background-size: cover
 	padding: rem(20px) 0 rem(150px)
+	position: relative
 .reviews_container
 .reviews__title
 	max-width: rem(600px)
@@ -24,7 +25,8 @@
 		content: ''
 		position: absolute
 		bottom: 0
-		left: calc(50% - rem(45px))
+		left: 50%
+		transform: translate(-50%)
 		width: rem(90px)
 		border-bottom: 3px solid #373e42
 .svg__about_header
@@ -116,7 +118,8 @@
 		content: ''
 		position: absolute
 		bottom: 0
-		left: calc(50% - rem(45px))
+		left: 50%
+		transform: translate(-50%)
 		width: rem(90px)
 		border-bottom: 3px solid #566358
 .contact__with__me__form
@@ -181,8 +184,11 @@
 .svg__portf_arrow_up_icon
 	fill: #fff
 	position: absolute
-	bottom: calc(rem(150px) + rem(65px))
-	left: calc(50% - rem(12.5px))
+	bottom: 15%
+	left: 50%
+	transform: translate(-50%,-15%)
+	// bottom: calc(rem(150px) + rem(65px))
+	// left: calc(50% - rem(12.5px))
 	width: 25px
 
 ::-webkit-scrollbar
