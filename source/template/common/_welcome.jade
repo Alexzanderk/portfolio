@@ -1,61 +1,62 @@
 .welcome__container__background
 	.wrapper
-		.autorization__link__container.clearfix
+		.autorization__link__container
 			.autorization__link
 				a.btn_autorization(href="#") Авторизоваться
-		
 		.information__container
-			.information__title
-				.author__photo
-					.photo__frame
-						img(src="/assets/img/me.jpg" alt="my photo")
-				.author__name 
-					h2.title__h2 Коцарев Александр
-					p.title__text Личный сайт веб разработчика
-				+social('social', ['vk', 'github-alt', 'linkedin'])
-			+navi_link('nav', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'})
+			.information
+				.information__title
+					.author__photo
+						.photo__frame
+							img(src="/assets/img/me.jpg" alt="my photo")
+					.author__name 
+						h2.title__h2 Коцарев Александр
+						p.title__text Личный сайт веб разработчика
+					+social('social', ['vk', 'github-alt', 'linkedin'])
+				+navi_link('nav', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'})
 		.autorization__form__container
-			.autorization__title
-				h1.title__h1 Авторизуйтесь
-			.form__container
-				form.form__autorization
-					
-					.autorization__form__row.autorization__form__row-input
-						input.form__input(type="text" name="login" id="login" placeholder="Логин")
-						label.label__input(for="login" class="label__login")
-							svg.svg__login(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
-								use.svg__icon(xlink:href= "assets/img/sprite.svg#login")
-					
-					.autorization__form__row.autorization__form__row-input
-						input.form__input(type="password" name="password" id='password' placeholder="Пароль")
-						label.label__input(for="password" class="label__password")
-							svg.svg__password(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
-								use.svg__icon(xlink:href= "assets/img/sprite.svg#password")
-					
-					.autorization__form__row
-						input.form__checkbox__input(type="checkbox" id="human" name="human")
-						label.label_checkbox(for="human")
-							.checkbox__custom
-								svg.svg__check(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
-									use.svg__icon(xlink:href= "assets/img/sprite.svg#check")
-							span.span__label__checkbox.autorization__label__item Я человек
-					
-					.autorization__form__row
-						span.span__question Вы точно не робот?
-						input.autorization__form__radio(type="radio" id="answer_yes" name="answer_robot")
-						label.label__radio(for="answer_yes")
-							.radio__custom
-							span.label__radio__span Да
-						input.autorization__form__radio(type="radio" id="answer_no" name="answer_robot" checked)
-						label.label__radio(for="answer_no")
-							.radio__custom
-							span.label__radio__span Не уверен
-					
-					.autorization__form__row-btn
-						ul.form__btn__list
-							li.form__btn__item
-								a.autorization__btn.autorization__btn_link(href="#") На главную
-							li.form__btn__item
-								input.autorization__btn.autorization__btn_submit(type="submit" value="Войти")
+			.autorization__form
+				.autorization__title
+					h1.title__h1__autorization Авторизуйтесь
+				.form__container
+					form.form__autorization
+						
+						.autorization__form__row.autorization__form__row-input
+							input.form__input(type="text" name="login" id="login" placeholder="Логин")
+							label.label__input(for="login" class="label__login")
+								svg.svg__login(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+									use.svg__icon(xlink:href= "assets/img/sprite.svg#login")
+						
+						.autorization__form__row.autorization__form__row-input
+							input.form__input(type="password" name="password" id='password' placeholder="Пароль")
+							label.label__input(for="password" class="label__password")
+								svg.svg__password(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+									use.svg__icon(xlink:href= "assets/img/sprite.svg#password")
+						
+						.autorization__form__row
+							input.form__checkbox__input(type="checkbox" id="human" name="human")
+							label.label_checkbox(for="human")
+								.checkbox__custom
+									svg.svg__check(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+										use.svg__icon(xlink:href= "assets/img/sprite.svg#check")
+								span.span__label__checkbox.autorization__label__item Я человек
+						
+						.autorization__form__row
+							span.span__question Вы точно не робот?
+							input.autorization__form__radio(type="radio" id="answer_yes" name="answer_robot")
+							label.label__radio(for="answer_yes")
+								.radio__custom
+								span.label__radio__span Да
+							input.autorization__form__radio(type="radio" id="answer_no" name="answer_robot" checked)
+							label.label__radio(for="answer_no")
+								.radio__custom
+								span.label__radio__span Не уверен
+						
+						.autorization__form__row-btn
+							ul.form__btn__list
+								li.form__btn__item
+									a.autorization__btn.autorization__btn_link(href="#") На главную
+								li.form__btn__item
+									input.autorization__btn.autorization__btn_submit(type="submit" value="Войти")
 			
-	footer.start__page__footer &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016
+		footer.start__page__footer &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016
