@@ -4,16 +4,4 @@
 	.contact__container
 		.contact__title
 			h2.title__h2__dark Контакты
-		ul.contact__list
-			li.contact__item
-				i.contact__icon.fa.fa-skype
-				a.contact__link(href="skype:alexzanderk?add") Alexzanderk
-			li.contact__item
-				i.contact__icon.fa.fa-envelope
-				a.contact__link(href="mailto: kotsarev.a@gmail.com.com") kotsarev.a@gmail.com
-			li.contact__item
-				i.contact__icon.fa.fa-phone
-				a.contact__link(href="tel:+380674302151") +38-067-430-21-51
-			li.contact__item
-				i.contact__icon.fa.fa-map-marker
-				span.contact__span Kiev city
+			+contact('contact', [['Alexanderk', 'kype:alexzanderk?add', 'skype'], ['kotsarev.a@gmail.com', 'mailto: kotsarev.a@gmail.com', 'envelope'], ['+38-067-430-21-51', 'tel:+380674302151', 'phone'], ['Kiev city', '', 'map-marker']])

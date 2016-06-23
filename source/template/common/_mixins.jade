@@ -58,6 +58,21 @@ mixin review (src, txt, aut, prof)
 				span.review__author__prof=prof
 
 
+
+
+mixin hamburg
+	.head_menu
+			a(href="#" class="fa fa-bars")
+
+
+
+mixin tringle
+	svg.svg__arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+		use.svg__icon(xlink:href= "assets/img/sprite.svg#arrow_down")
+
+
+
+
 mixin articles(idName, title, date, content)
 	article(id="#{idName}" class="article__item")
 		div(class="article__item__title")
@@ -69,10 +84,26 @@ mixin articles(idName, title, date, content)
 				#{cont[0]}.article__text #{cont[1]}
 
 
-mixin hamburg
-	.head_menu
-			a(href="#" class="fa fa-bars")
 
-mixin tringl
-	svg.svg__arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
-		use.svg__icon(xlink:href= "assets/img/sprite.svg#arrow_down")
+
+//- Блок с контактами
+mixin contact(className, items)
+	ul(class="{className}__list")
+		each cont, tag in items
+			li(class="#{className}__item")
+				i(class="#{className}__icon fa fa-#{cont[2]}") 
+				a(href="#{cont[1]}" class="#{className}__link")= cont[0]
+			
+
+
+
+//- Навигация с сылками
+mixin navi_link (className, items, activeItem)
+	nav(class="#{className}")
+		div(class="#{className}__container")
+			ul(class="#{className}__list")
+				each link, nav in items
+					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+						a(href="#{link}" class="#{className}__link")= nav 
+
+
