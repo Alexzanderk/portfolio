@@ -1,14 +1,14 @@
 # Loftshool portfolio
 
 Это первый проект на обучение в школе Loftschool. В проекте использовались следующие технологии: 
-# 1. gulp
-# 2. sass
-# 3. jade
-# 4. js
-# 5. bower
-# 6. singularity
-# 7. jquery
-# и Бог еще знает что будет использоваться
++ 1. gulp
++ 2. sass
++ 3. jade
++ 4. js
++ 5. bower
++ 6. singularity
++ 7. jquery
++ и Бог еще знает что будет использоваться
 
 
 Инструкция:
