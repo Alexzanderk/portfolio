@@ -9,61 +9,52 @@
 	background: rgba(#6c9c5a, .87)
 	z-index: 100
 	display: none
-	.modal__content
-		margin: auto
-		.menu__btn
-			float: right
-			padding: rem(36px) rem(30px)
-			a
-				display: inline-block
-				text-decoration: none
-				color: white
-				font-family: SansusWebissimo
-				font-size: rem(47px)
-				font-weight: 400
-				line-height: rem(24px)
-				text-transform: uppercase
-		nav.navi
-			display: flex
-			div.navi__container
-				margin: auto
-				ul.navi__list
-					list-style: none
-					li.navi__item
-						position: relative
-						a
-							display: block
-							padding: rem(25px)
-							margin: rem(25px)
-							text-align: center
-							text-decoration: none
-							color: white
-							font-family: SansusWebissimo
-							font-size: rem(63px)
-							font-weight: 400
-							line-height: rem(24px)
-							text-transform: uppercase
+.modal__content
+	display: flex
+	flex-flow: column
+	margin: auto
+.menu__btn
+	margin-left: auto
+	padding-top: rem(36px) 
+	padding-right: rem(30px)
+.btn__close
+	display: inline-block
+	text-decoration: none
+	color: white
+	font-family: SansusWebissimo
+	font-size: rem(47px)
+	font-weight: 400
+	line-height: rem(24px)
+	text-transform: uppercase
 								
-.navi__item_active:after,
-.navi__item:hover:after
+
+.menu
+.menu__container
+	margin: auto
+.menu__list
+	list-style: none
+	margin: 0
+	padding: 0
+.menu__item
+	position: relative
+	padding: rem(25px)
+	margin: rem(25px)
+	text-align: center
+.menu__link
+	text-decoration: none
+	color: #fff
+	font-family: SansusWebissimo
+	font-size: rem(63px)
+	font-weight: 400
+	line-height: rem(24px)
+	text-transform: uppercase
+
+.menu__item_active:after,
+.menu__item:hover:after
 	content: ''
 	position: absolute
 	bottom: 0
-	left: calc(50% - rem(45px))
+	left: 50%
+	transform: translate(-50%)
 	width: rem(90px)
 	border-bottom: 3px solid #fff
-
-
-
-
-nav.navi
-		div.navi__container
-			ul.navi__list
-				li.navi__item 
-					a.navi__link
-
-
-
-.navi__item_active
-
-
