@@ -1,11 +1,3 @@
-//- Навигация 
-//- mixin navigation (className, items, activeItem)
-//- 	nav(class="#{className}")
-//- 		div(class="#{className}__container")
-//- 			ul(class="#{className}__list")
-//- 				each nav, ndx in items
-//- 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
-//- 						a(href="#" class="#{className}__link")= nav
 
 //- Навигация с сылками
 mixin navi_link (className, items, activeItem)
@@ -30,12 +22,26 @@ mixin navi_links (className, items, activeItem)
 						-console.log('i')
 
 
+
+
 mixin social (className, items)
 	div(class="#{className}")
 		ul(class="#{className}__list")
-			each link, soc in items
+			each cont in items
 				li(class="#{className}__item")
-					a(href="#{link}" target="_blank" class="#{className}__link fa fa-#{soc}")
+					a(href="#{cont[1]}" target="_blank" class="#{className}__link fa fa-#{cont[0]}")
+						span.social-span= cont[2]
+
+
+
+
+//- mixin social (className, items)
+//- 	div(class="#{className}")
+//- 		ul(class="#{className}__list")
+//- 			each link, soc in items
+//- 				li(class="#{className}__item")
+//- 					a(href="#{link}" target="_blank" class="#{className}__link fa fa-#{soc}")
+
 
 
 mixin articlelist (className, items, activeItem)
@@ -95,16 +101,5 @@ mixin contact(className, items)
 				i(class="#{className}__icon fa fa-#{cont[2]}") 
 				a(href="#{cont[1]}" class="#{className}__link")= cont[0]
 			
-
-
-
-//- //- Навигация с сылками  и  активным классом
-//- mixin navi_link (className, items, activeItem)
-//- 	nav(class="#{className}")
-//- 		div(class="#{className}__container")
-//- 			ul(class="#{className}__list")
-//- 				each link, nav in items
-//- 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
-//- 						a(href="#{link}" class="#{className}__link")= nav 
 
 
