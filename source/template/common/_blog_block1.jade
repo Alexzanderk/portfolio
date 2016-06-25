@@ -1,22 +1,22 @@
 .head__wrapper
-	.tringl__down__container
+	.tringledown__container
 		header.header__container.clearfix
-			+social('socials', ['vk', 'github-alt', 'linkedin'])
+			+social('socials', {'vk' : 'https://vk.com', 'github-alt' : 'https://github.com/wellapex/portfolio', 'linkedin': 'https://www.linkedin.com/'})
 			+hamburg
 		section.about__author
-			.author__photo__container
-				.author__photo__frame
-					img.author__main__photo(src="/assets/img/me.jpg", alt="My Photo")
-			.head__block__name
+			.photo__container
+				.photo__frame-author
+					img.author__photo-main(src="/assets/img/me.jpg", alt="My Photo")
+			.blog-name__container
 				h1.title__h1 Блог
 				svg.svg__blog_header(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 					use.svg__icon(xlink:href= "assets/img/sprite.svg#blog_header")
-				p.text__p Статьи которые я написал
-	section.head__side__down
-		.arrow__down__container
-			a.arrow__down__link(href="#")
+				p.text-p Статьи которые я написал
+	section.sidedown
+		.sidedown__container
+			a.sidedown__link(href="#")
 				+tringle
-		.head__footer_blog
+		.sidedown__tringles
 			svg.svg__tringls(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
 				polygon(class="left__side_footer_blog" points="0,0 0,86 500.8,86 500.8,75.5")
 				polygon(class="right__side_footer_blog" points="1000,0 1000,86 500,86 500,75.5")

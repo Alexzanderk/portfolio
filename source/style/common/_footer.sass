@@ -7,16 +7,16 @@
 	display: flex
 	flex-flow: row wrap
 
-.footer__container__up
+.footer__container-up
 	width: 100%
 	display: flex
 	justify-content: space-between
 
 /* LEFT BLOCK */
-.footer__left__side
+.footer__left-side
 	flex: 0 2 auto
 	margin: rem(30px) 0 rem(20px)
-.footer__left__side__text
+.left-side-text
 	color: #fff
 	font-family: Roboto-regular
 	font-size: rem(16px)
@@ -25,27 +25,27 @@
 	padding-left: rem(30px)
 	margin: 0
 /* CENTER BLOCK */
-.footer__center__side
+.footer__center-side
 	flex: 1 0 auto
 	margin: rem(30px) 0 rem(20px)
 .shape__container
 	border-left: 1px solid rgba(#FFF, .2)
 	border-right: 1px solid rgba(#FFF, .2)
 	
-.footer__navigation
-.footer__navigation__container
-.footer__navigation__list
+.footer-navigation
+.footer-navigation__container
+.footer-navigation__list
 	padding: 0
 	margin: 0
 	list-style: none
-.footer__navigation__item
+.footer-navigation__item
 	display: inline-block
 	padding: 0 rem(9.5px)
 	&:first-child
 		padding-left: rem(30px)
 	&:last-child
 		padding-right: rem(28px)
-.footer__navigation__link
+.footer-navigation__link
 	text-decoration: none
 	color: #fff
 	font-family: Roboto-regular
@@ -56,17 +56,18 @@
 	&:hover
 		text-decoration: underline
 		opacity: .5
-.footer__socials
-.footer__socials__list
+.footer-socials
+.footer-socials__list
 	padding: 0
 	margin: 0
 	list-style: none
-.footer__socials__item
+	padding: rem(20px) 0 rem(25px)
+.footer-socials__item
 	display: inline-block
-	padding: rem(20px) rem(10px) rem(25px)
+	padding: 0 rem(10px)
 	&:first-child
 		padding-left: rem(30px)
-.footer__socials__link
+.footer-socials__link
 	text-decoration: none
 	opacity: 0.5
 	color: #FFF
@@ -75,10 +76,10 @@
 		opacity: 1
 
 /* RIGHT BLOCK */
-.footer__right__side
+.footer__right-side
 	flex: 0 3 auto
 	margin: rem(30px) 0px rem(20px) rem(20px)
-.footer__right__side__text
+.text-right-side
 	color: rgba(#fff, .5)
 	box-sizing: border-box
 	font-family: Roboto-regular
@@ -88,10 +89,12 @@
 	font-style: italic
 	padding:rem( 0px) rem(50px) 0 rem(30px)
 	margin: 0
-.footer__right__side__text_bold
+.text-bold
 	font-weight: 700
 
-.footer__container__down
+
+/* footer - down */
+.footer__container-down
 	width: 100%
 	background-color: rgba(#6c9c5a, .85)
 	color: #fff

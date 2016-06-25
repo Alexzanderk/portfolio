@@ -1,6 +1,6 @@
-.welcome__container__background
+.welcome__container-background
 	.wrapper
-		.autorization__link__container
+		.autorization__link-container
 			.autorization__link
 				a.btn_autorization(href="#") Авторизоваться
 		.information__container
@@ -12,51 +12,51 @@
 					.author__name 
 						h2.title__h2 Коцарев Александр
 						p.title__text Личный сайт веб разработчика
-					+social('social', ['vk', 'github-alt', 'linkedin'])
+					+social('social', {'vk' : 'https://vk.com', 'github-alt' : 'https://github.com/wellapex/portfolio', 'linkedin': 'https://www.linkedin.com/'})
 				+navi_link('nav', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'})
-		.autorization__form__container
+		.autorization__form-container
 			.autorization__form
 				.autorization__title
-					h1.title__h1__autorization Авторизуйтесь
+					h1.title__h1-autorization Авторизуйтесь
 				.form__container
 					form.form__autorization
 						
-						.autorization__form__row.autorization__form__row-input
+						.autorization__form-row.autorization__form-row-input
 							input.form__input(type="text" name="login" id="login" placeholder="Логин")
 							label.label__input(for="login" class="label__login")
 								svg.svg__login(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 									use.svg__icon(xlink:href= "assets/img/sprite.svg#login")
 						
-						.autorization__form__row.autorization__form__row-input
+						.autorization__form-row.autorization__form-row-input
 							input.form__input(type="password" name="password" id='password' placeholder="Пароль")
 							label.label__input(for="password" class="label__password")
 								svg.svg__password(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 									use.svg__icon(xlink:href= "assets/img/sprite.svg#password")
-						
-						.autorization__form__row
-							input.form__checkbox__input(type="checkbox" id="human" name="human")
-							label.label_checkbox(for="human")
+						//- CHECKBOX
+						.autorization__form-row
+							input.form-checkbox__input(type="checkbox" id="human" name="human")
+							label.label-checkbox(for="human")
 								.checkbox__custom
 									svg.svg__check(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 										use.svg__icon(xlink:href= "assets/img/sprite.svg#check")
-								span.span__label__checkbox.autorization__label__item Я человек
-						
-						.autorization__form__row
+								span.span-label-checkbox.autorization-label__item Я человек
+						//- RADIO
+						.autorization__form-row
 							span.span__question Вы точно не робот?
-							input.autorization__form__radio(type="radio" id="answer_yes" name="answer_robot")
+							input.autorization__form-radio(type="radio" id="answer_yes" name="answer_robot")
 							label.label__radio(for="answer_yes")
 								.radio__custom
-								span.label__radio__span Да
-							input.autorization__form__radio(type="radio" id="answer_no" name="answer_robot" checked)
+								span.label__radio-span Да
+							input.autorization__form-radio(type="radio" id="answer_no" name="answer_robot" checked)
 							label.label__radio(for="answer_no")
 								.radio__custom
-								span.label__radio__span Не уверен
+								span.label__radio-span Не уверен
 						
-						.autorization__form__row-btn
-							ul.form__btn__list
-								li.form__btn__item
-									a.autorization__btn.autorization__btn_link(href="#") На главную
-								li.form__btn__item
-									input.autorization__btn.autorization__btn_submit(type="submit" value="Войти")
+						.autorization__form-row-btn
+							ul.form-btn__list
+								li.form-btn__item
+									a.autorization-btn.autorization-btn__link(href="#") На главную
+								li.form-btn__item
+									input.autorization-btn.autorization-btn__submit(type="submit" value="Войти")
 			
 		footer.start__page__footer &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016

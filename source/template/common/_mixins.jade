@@ -1,11 +1,11 @@
 //- Навигация 
-mixin navigation (className, items, activeItem)
-	nav(class="#{className}")
-		div(class="#{className}__container")
-			ul(class="#{className}__list")
-				each nav, ndx in items
-					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
-						a(href="#" class="#{className}__link")= nav
+//- mixin navigation (className, items, activeItem)
+//- 	nav(class="#{className}")
+//- 		div(class="#{className}__container")
+//- 			ul(class="#{className}__list")
+//- 				each nav, ndx in items
+//- 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+//- 						a(href="#" class="#{className}__link")= nav
 
 //- Навигация с сылками
 mixin navi_link (className, items, activeItem)
@@ -15,53 +15,54 @@ mixin navi_link (className, items, activeItem)
 				each link, nav in items
 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
 						a(href="#{link}" class="#{className}__link")= nav
+
 //- Пробный вариант
 mixin navi_links (className, items, activeItem)
 	nav(class="#{className}")
 		div(class="#{className}__container")
 			ul(class="#{className}__list")
-				each link, nav in items
-					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+				-var i=0
+				each link, nav in items 
+					-i++
+
+					li(class="#{className}__item" + ( (i === activeItem) ? ' #{className}__item_active' : '' ))
 						a(href="#{link}" class="#{className}__link")= nav
-
-
-
+						-console.log('i')
 
 
 mixin social (className, items)
 	div(class="#{className}")
 		ul(class="#{className}__list")
-			each soc in items
+			each link, soc in items
 				li(class="#{className}__item")
-					a(href="#" class="#{className}__link fa fa-#{soc}")
-
+					a(href="#{link}" target="_blank" class="#{className}__link fa fa-#{soc}")
 
 
 mixin articlelist (className, items, activeItem)
 	div(class="#{className}")
 		ul(class="#{className}__list")
 			each list, numb in items
-				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item_active' : ''))
+				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item-active' : ''))
 					a(href="#" class="#{className}__link")= list
 
 mixin review (src, txt, aut, prof)
 	.reviews__item
-		.reviews__item__photo
+		.reviews__item-photo
 			img.review__photo(src=src, alt="author photo")
-		.reviews__item__review
+		.reviews__item-review
 			p.review__comment=txt
 			svg.svg__quote(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#quote")
-		.reviews__item__author
-			p.review__author= aut
+		.reviews__item-author
+			p.review-author= aut
 				br 
-				span.review__author__prof=prof
+				span.review-author__prof=prof
 
 
 
 
 mixin hamburg
-	.head_menu
+	.head__menu
 			a(href="#" class="fa fa-bars")
 
 
@@ -97,13 +98,13 @@ mixin contact(className, items)
 
 
 
-//- Навигация с сылками
-mixin navi_link (className, items, activeItem)
-	nav(class="#{className}")
-		div(class="#{className}__container")
-			ul(class="#{className}__list")
-				each link, nav in items
-					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
-						a(href="#{link}" class="#{className}__link")= nav 
+//- //- Навигация с сылками  и  активным классом
+//- mixin navi_link (className, items, activeItem)
+//- 	nav(class="#{className}")
+//- 		div(class="#{className}__container")
+//- 			ul(class="#{className}__list")
+//- 				each link, nav in items
+//- 					li(class="#{className}__item" + ( (ndx == activeItem) ? ' #{className}__item_active' : '' ))
+//- 						a(href="#{link}" class="#{className}__link")= nav 
 
 

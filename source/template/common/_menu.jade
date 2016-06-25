@@ -1,7 +1,6 @@
-#modal
-	.modal__content
-		.menu__btn
-			a(href="#")
+#modal.modal__menu
+	.modal__content.clearfix
+		.menu__btn.clearfix
+			a.btn__close(href="#")
 				i.fa.fa-times
-		.clearfix
-		+navigation('navi', ['Мои работы', 'Блог', 'Обо мне', 'Авторизация'], '2')
+		+navi_links('navi', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'}, '0')
