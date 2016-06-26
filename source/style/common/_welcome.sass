@@ -2,6 +2,7 @@
 	background: url(../img/bg.jpg) no-repeat
 	background-size: cover 
 	height: 100vh
+	overflow: hidden
 .wrapper
 	display: flex
 	flex-flow: column
@@ -11,7 +12,7 @@
 .autorization__link-container
 	flex: 0 0 auto
 	margin-left: auto
-	+breakpoint(320px 480px)
+	+breakpoint(max-width 480px)
 		margin-left: none
 		margin: auto
 .autorization__link
@@ -46,6 +47,7 @@
 	width: rem(380px)
 	background-color: rgba(48,72,65,.7)
 	text-align: center
+
 .information__title
 	position: relative
 .author__photo
@@ -61,13 +63,14 @@
 		height: auto
 		text-align: center
 .author__name 
-.title__h2
+.title__h1
 	font-family: $text-font-h2
 	font-size: rem(28px)
 	font-weight: 800
 	line-height: rem(34px)
 	color: #fff
 	margin: 0
+	text-align: center
 .title__text
 	color: rgba(255,255,255,.8)
 	font-family: $text-font-p
@@ -326,7 +329,7 @@
 	padding: 0
 	cursor: pointer
 /* Footer */
-.start__page__footer
+.start-page__footer
 	flex: 0 0 auto
 	text-align: center
 	color: #fff

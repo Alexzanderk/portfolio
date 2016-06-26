@@ -13,6 +13,8 @@
 		height: rem(130px)
 .header__container
 	padding: rem(37px) rem(30px) rem(50px)
+	+breakpoint(max-width 480px)
+		padding: rem(17px) rem(10px)
 .head__menu
 	float: right
 	a
@@ -25,6 +27,7 @@
 .about__author-bg
 	padding: rem(50px) 0 0
 	background: url(../img/portfolio_header.svg) no-repeat center
+	background-size: contain
 	text-align: center
 .photo__container
 .photo__frame-author
@@ -67,3 +70,5 @@
 		fill: #ebefe2
 	polygon.right__side__footer
 		fill: #f4f5f0
+		+breakpoint(max-width 480px)
+		fill: #ebefe2

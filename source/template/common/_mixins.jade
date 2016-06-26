@@ -21,9 +21,7 @@ mixin navi_links (className, items, activeItem)
 						a(href="#{link}" class="#{className}__link")= nav
 						-console.log('i')
 
-
-
-
+//- Social icon 
 mixin social (className, items)
 	div(class="#{className}")
 		ul(class="#{className}__list")
@@ -32,18 +30,7 @@ mixin social (className, items)
 					a(href="#{cont[1]}" target="_blank" class="#{className}__link fa fa-#{cont[0]}")
 						span.social-span= cont[2]
 
-
-
-
-//- mixin social (className, items)
-//- 	div(class="#{className}")
-//- 		ul(class="#{className}__list")
-//- 			each link, soc in items
-//- 				li(class="#{className}__item")
-//- 					a(href="#{link}" target="_blank" class="#{className}__link fa fa-#{soc}")
-
-
-
+//- Article list
 mixin articlelist (className, items, activeItem)
 	div(class="#{className}")
 		ul(class="#{className}__list")
@@ -51,6 +38,19 @@ mixin articlelist (className, items, activeItem)
 				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item-active' : ''))
 					a(href="#" class="#{className}__link")= list
 
+//- Article item
+mixin articles(idName, title, date, content)
+	article(id="#{idName}" class="article__item")
+		div(class="article__item-title")
+			h3.title__h3=title
+		div(class="article__item-date")
+			p.date__text=date
+		div(class="article__item-content")
+			each cont, tag in content
+				#{cont[0]}.article__text #{cont[1]}
+
+
+//- Reviews
 mixin review (src, txt, aut, prof)
 	.reviews__item
 		.reviews__item-photo
@@ -64,38 +64,19 @@ mixin review (src, txt, aut, prof)
 				br 
 				span.review-author__prof=prof
 
-
-
-
+//- Btn-Menu on start page
 mixin hamburg
 	.head__menu
 			a(href="#" class="fa fa-bars")
 
-
-
+//- Tringle on start page
 mixin tringle
 	svg.svg__arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 		use.svg__icon(xlink:href= "assets/img/sprite.svg#arrow_down")
 
-
-
-
-mixin articles(idName, title, date, content)
-	article(id="#{idName}" class="article__item")
-		div(class="article__item__title")
-			h3.title__h3=title
-		div(class="article__item__date")
-			p.date__text=date
-		div(class="article__item__content")
-			each cont, tag in content
-				#{cont[0]}.article__text #{cont[1]}
-
-
-
-
 //- Блок с контактами
 mixin contact(className, items)
-	ul(class="{className}__list")
+	ul(class="#{className}__list")
 		each cont, tag in items
 			li(class="#{className}__item")
 				i(class="#{className}__icon fa fa-#{cont[2]}") 

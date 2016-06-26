@@ -11,11 +11,16 @@
 	width: 100%
 	display: flex
 	justify-content: space-between
-
+	+breakpoint(max-width 480px)
+		flex-flow: row wrap
 /* LEFT BLOCK */
 .footer__left-side
 	flex: 0 2 auto
 	margin: rem(30px) 0 rem(20px)
+	+breakpoint(max-width 480px)
+		width: 100%
+		margin: 0
+		padding: rem(20px) rem(25px)
 .left-side-text
 	color: #fff
 	font-family: Roboto-regular
@@ -24,13 +29,29 @@
 	line-height: rem(24px)
 	padding-left: rem(30px)
 	margin: 0
+	+breakpoint(max-width 480px)
+		padding: 0
+		text-align: center
 /* CENTER BLOCK */
 .footer__center-side
 	flex: 1 0 auto
 	margin: rem(30px) 0 rem(20px)
+	+breakpoint(max-width 480px)
+		width: 100%
+		padding: 0 rem(15px)
+		margin: 0
+		box-sizing: border-box
+		// flex: 0 0 100%
 .shape__container
 	border-left: 1px solid rgba(#FFF, .2)
 	border-right: 1px solid rgba(#FFF, .2)
+	+breakpoint(max-width 480px)
+		border: none
+		border-top: 1px solid rgba(#FFF, .2)
+		border-bottom: 1px solid rgba(#FFF, .2)
+		padding: rem(20px) 0
+		width: 100%
+		margin: 0
 	
 .footer-navigation
 .footer-navigation__container
@@ -43,8 +64,14 @@
 	padding: 0 rem(9.5px)
 	&:first-child
 		padding-left: rem(30px)
+		+breakpoint(max-width 480px)
+			padding-left: 7px
 	&:last-child
 		padding-right: rem(28px)
+		+breakpoint(max-width 480px)
+			padding: 0
+	+breakpoint(max-width 480px)
+		padding: 0 5px
 .footer-navigation__link
 	text-decoration: none
 	color: #fff
@@ -57,16 +84,26 @@
 		text-decoration: underline
 		opacity: .5
 .footer-socials
+	+breakpoint(max-width 480px)
+		// margin: auto
+		// width: 100%
+		// display: block
+		text-align: center
 .footer-socials__list
 	padding: 0
 	margin: 0
 	list-style: none
 	padding: rem(20px) 0 rem(25px)
+	+breakpoint(max-width 480px)
+		padding: 0
+		padding-top: rem(20px)
 .footer-socials__item
 	display: inline-block
 	padding: 0 rem(10px)
 	&:first-child
 		padding-left: rem(30px)
+		+breakpoint(max-width 480px)
+			padding-left: 0
 .footer-socials__link
 	text-decoration: none
 	opacity: 0.5
@@ -79,6 +116,10 @@
 .footer__right-side
 	flex: 0 3 auto
 	margin: rem(30px) 0px rem(20px) rem(20px)
+	+breakpoint(max-width 480px)
+		margin: 0
+		padding: rem(20px) rem(15px) rem(17px)
+		text-align: center
 .text-right-side
 	color: rgba(#fff, .5)
 	box-sizing: border-box
@@ -103,3 +144,6 @@
 	font-size: rem(16px)
 	font-weight: 300
 	line-height: rem(38px)
+	+breakpoint(max-width 480px)
+		line-height: rem(24px)
+		padding: rem(10px) 0

@@ -10,7 +10,7 @@
 						.photo__frame
 							img(src="/assets/img/me.jpg" alt="my photo")
 					.author__name 
-						h2.title__h2 Коцарев Александр
+						h1.title__h1 Коцарев Александр
 						p.title__text Личный сайт веб разработчика
 					+social('social', [['vk', 'https://vk.com', 'Вконтакте'], ['github-alt', 'https://github.com/wellapex/portfolio', 'Git'], ['linkedin', 'https://www.linkedin.com/', 'LinkedIn']])
 				+navi_link('nav', {'Мои работы' : 'work.html', 'Обо мне' : 'about.html', 'Блог' : 'blog.html'})
@@ -20,13 +20,13 @@
 					h1.title__h1-autorization Авторизуйтесь
 				.form__container
 					form.form__autorization
-						
+						//- Login
 						.autorization__form-row.autorization__form-row-input
 							input.form__input(type="text" name="login" id="login" placeholder="Логин")
 							label.label__input(for="login" class="label__login")
 								svg.svg__login(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 									use.svg__icon(xlink:href= "assets/img/sprite.svg#login")
-						
+						//- Pass
 						.autorization__form-row.autorization__form-row-input
 							input.form__input(type="password" name="password" id='password' placeholder="Пароль")
 							label.label__input(for="password" class="label__password")
@@ -51,7 +51,7 @@
 							label.label__radio(for="answer_no")
 								.radio__custom
 								span.label__radio-span Не уверен
-						
+						//- Btn
 						.autorization__form-row-btn
 							ul.form-btn__list
 								li.form-btn__item
@@ -59,4 +59,4 @@
 								li.form-btn__item
 									input.autorization-btn.autorization-btn__submit(type="submit" value="Войти")
 			
-		footer.start__page__footer &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016
+		footer.start-page__footer &#169; Kotsarev Alexandr | создано с любовью в LoftSchool | 2016

@@ -8,12 +8,19 @@
 	background: #faf8f0
 	padding-bottom: rem(250px)
 	position: relative
+	+breakpoint(max-width 480px)
+		display: flex
+		flex-flow: row wrap
+
 
 /* LEFT SIDE */
 
 .left-side__article
 	@include grid-span(4, 1)
 	height: 100%
+	+breakpoint(max-width 480px)
+		width: 100%
+		display: none
 .artcl
 	padding-top: rem(40px)
 .artcl__list
@@ -49,30 +56,45 @@
 
 .right-side__article
 	@include grid-span(8, 5)
+	+breakpoint(max-width 480px)
+		width: 100%
+		box-sizing: border-box
+		padding: 0 rem(10px)
+		margin-bottom: 150px
 .article__item
-	padding: 30px
+	padding: rem(30px)
 	border-bottom: 5px solid rgba(#373e42, .07)
 	&:last-child
 		border: none
-.article__item__title
+	+breakpoint(max-width 480px)
+		padding: 0
+.article__item-title
+	+breakpoint(max-width 480px)
+		padding: rem(30px) 0
 .title__h3
 	color: #566358
 	font-family: SansusWebissimo
-	font-size: 35px
+	font-size: rem(35px)
 	font-weight: 400
 	margin: 0
-	padding: 10px 0
-.article__item__date
+	padding: rem(10px) 0
+	+breakpoint(max-width 480px)
+		padding: rem(10px) 0
+.article__item-date
+	+breakpoint(max-width 480px)
+		margin: rem(10px) 0
 	.date__text
 		color: rgba(#4e8839, .7)
 		font-family: roboto-regular
-		font-size: 16px
+		font-size: rem(16px)
 		font-weight: 400
-		margin: 25px 0
-.article__item__content
+		margin: rem(25px) 0
+		+breakpoint(max-width 480px)
+			margin: 0
+.article__item-content
 .article__text
 	color: #566358
 	font-family: roboto-regular
-	font-size: 16px
+	font-size: rem(16px)
 	font-weight: 400
-	line-height: 32px
+	line-height: rem(32px)

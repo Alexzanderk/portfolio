@@ -2,10 +2,15 @@
 	position: relative
 .work__title
 	background: #f8f9f5
-	height: rem(170px)
+	// min-height: rem(170px)
 	width: 100%
 	position: relative
-.title__h1-work
+	+breakpoint(max-width 480px)
+		height: auto
+		padding: rem(17px) 0
+		box-sizing: margin-box
+		width: 100%
+.title__h2-work
 	text-align: center
 	color: #373e42
 	font-family: SansusWebissimo
@@ -25,6 +30,10 @@
 		transform: translate(-50%)
 		width: rem(90px)
 		border-bottom: 3px solid #566358
+	+breakpoint(max-width 480px)
+		font-size: rem(35px)
+		padding-bottom: rem(19px)
+		line-height: rem(35px)
 .svg__works
 	width: 35%
 	z-index: 10
@@ -34,11 +43,18 @@
 	fill: #93c42e
 	opacity: .1
 	transform: translate(-50%,-50%)
-.works__container
+	+breakpoint(max-width 480px)
+		width: 60%
+		top: 50%
+.slider__container
 	height: 100vh
 	display: flex
 	flex-flow: column wrap
 	min-height: rem(650px)
+	+breakpoint(max-width 480px)
+		flex-flow: column nowrap
+
+/* Window description */
 .slider__description
 	background: #ebefe2
 	width: 50%
@@ -47,6 +63,9 @@
 	flex-flow: column
 	align-items: center
 	justify-content: center
+	+breakpoint(max-width 480px)
+		width: 100%
+		order: 2
 .description__title
 	text-align: center
 	width: 80%
@@ -67,11 +86,24 @@
 		width: rem(90px)
 		border-bottom: 3px solid #566358
 .description__skill
-	padding: rem(27px)
+.skill__list
+	list-style: none
+	padding: 0
+.skill__item
+	padding: rem(2px)
 	color: #4e8839
+	display: inline-block
 	font-family: Roboto-Regular
-	font-size: rem(16px)
 	font-weight: 500
+	font-size: rem(16px)
+	&:after
+		content: ','
+	&:last-child:after
+		content: ''
+.uppercase
+	text-transform: uppercase
+
+
 .description__btn
 	padding: rem(23px)
 .slider__link
@@ -93,18 +125,49 @@
 	transform: translate(-50%,-50%)
 	fill: #fff
 	width: rem(25px)
+
+
+/* Window slider */
 .slider__preview
 	background: #e1e4d7
 	width: 50%
 	height: 70%
+	position: relative
+	overflow: hidden
+	+breakpoint(max-width 480px)
+		width: 100%
+		order: 1
 .slider__preview-img
 	width: auto
 	height: 100%
+.slider__list
+	padding: 0
+	margin: 0
+	list-style: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	
+.slider__item
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: -100%
+	&_active
+		top: 0%
+
+/* Slider controls */
 .slider__btn
 	width: 50%
 	height: 30%
 	display: flex
 	z-index: 20
+	+breakpoint(max-width 480px)
+		width: 100%
+		order: 3
 .slider__bg
 	background-color: rgba(176, 183, 170, 0.7)
 	position: relative

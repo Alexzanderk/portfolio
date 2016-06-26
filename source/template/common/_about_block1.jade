@@ -1,4 +1,5 @@
 .head__wrapper
+	include _preloader
 	.tringledown__container
 		header.header__container.clearfix
 			+social('socials', [['vk', 'https://vk.com', 'Вконтакте'], ['github-alt', 'https://github.com/wellapex/portfolio', 'Git'], ['linkedin', 'https://www.linkedin.com/', 'LinkedIn']])
@@ -8,7 +9,7 @@
 				.photo__frame-author
 					img.author__photo-main(src="/assets/img/me.jpg", alt="My Photo")
 			.author__name
-				h2.title__h2 Коцарев Александр
+				h1.title__h1 Коцарев Александр
 				p.title__text Личный сайт веб разработчика
 	section.sidedown
 		.sidedown__container

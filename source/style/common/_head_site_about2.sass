@@ -1,6 +1,8 @@
 .main-content__container 
 	display: flex
 	position: relative
+	+breakpoint(max-width 480px)
+		flex-flow: row wrap
 
 
 /* LEFT SIDE */
@@ -8,12 +10,17 @@
 .left-side
 	width: 50%
 	background: #ebefe2
+	+breakpoint(max-width 480px)
+		width: 100%
 .left-side__title
 	width: $left-side-container
 	margin: auto
 	margin-bottom: rem(35px)
 	position: relative
-.title__h1-dark
+	+breakpoint(max-width 480px)
+		width: 100%
+
+.title__h2-dark
 	color: #373e42
 	font-family: SansusWebissimo
 	font-size: rem(63px)
@@ -44,16 +51,25 @@
 .left-side__photo-frame
 	max-width: $left-side-container
 	width: rem(400px)
-	height: rem(400px)
+	// height: rem(400px)
+	height: auto
 	overflow: hidden
 	text-align: center
 	margin: 0 auto
+	+breakpoint(max-width 480px)
+		max-width: 100%
+		margin: 0 0
+		box-sizing: margin-box
 .left-side__photo
 	width: 100%
 	height: auto
 .left-side__about-me
 	margin: rem(40px) auto
 	width: $left-side-container
+	+breakpoint(max-width 480px)
+		margin: rem(13px) auto
+		margin: 0
+		width: 100%
 .title__h3-dark
 	color: #566358
 	font-family: SansusWebissimo
@@ -74,6 +90,9 @@
 		left: 50%
 		transform: translate(-50%)
 		border-bottom: 3px solid #566358
+	+breakpoint(max-width 480px)
+		margin-bottom: 0
+		padding-top: rem(30px)
 .text__p-about
 	margin: rem(10px) 0
 	color: #566358
@@ -81,6 +100,9 @@
 	font-size: rem(16px)
 	font-weight: 400
 	line-height: rem(24px)
+	+breakpoint(max-width 480px)
+		margin: 0
+		padding: rem(20px) rem(10px) rem(30px)
 
 
 /* RIGHT SIDE */
@@ -88,23 +110,35 @@
 .right-side
 	width: 50%
 	background: #f4f5f0
+	+breakpoint(max-width 480px)
+		width: 100%
+		padding: rem(30px) 0
 .right-side__title
 	margin: rem(10px) auto rem(35px)
 	width: $right-side-container
+	+breakpoint(max-width 480px)
+		margin: 0 auto
+		width: 80%
+
 .right-side__title-container
-	width: rem(350px)
+	max-width: rem(350px)
 	text-align: center
 	margin: 0 auto
 	position: relative
 .right-side-info
 	margin: auto
 	width: $right-side-container
+	+breakpoint(max-width 480px)
+		margin: 0
+		width: 100%
 .right-side__diagrams
 	margin: rem(55px) auto
 	width: $right-side-container
 	list-style: none
 	padding: 0
-
+	+breakpoint(max-width 480px)
+		margin: 0
+		width: 100%
 .title__skill
 	color: #566358
 	font-family: Roboto-Regular
@@ -112,16 +146,26 @@
 	font-weight: 500
 	line-height: rem(32px)
 	margin: rem(19px) 0
+	+breakpoint(max-width 480px)
+		margin: 0
+		padding-bottom: 20px
+		text-align: center
 .diagram__list
 	padding: 0
 	margin: 0
 	list-style: none
-
+	+breakpoint(max-width 480px)
+		display: flex
+		flex-flow: row wrap
+		margin: auto
 .diagram__item
 	display: inline-block
 	padding: 0 rem(18.5px)
 	margin-bottom: rem(22px)
 	position: relative
+	+breakpoint(max-width 480px)
+		margin: 0 auto rem(30px)
+
 
 .skill__name
 	color: #4e8839
@@ -138,6 +182,8 @@
 	display: flex
 	align-items: center
 	justify-content: center
+	+breakpoint(max-width 480px)
+		left: rem(55px)	
 
 .disable
 	opacity: .5
