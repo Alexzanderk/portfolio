@@ -1,7 +1,10 @@
-.main-content__container 
+.main-content__container
+	box-sizing: border-box
 	display: flex
 	position: relative
 	+breakpoint(max-width 480px)
+		flex-flow: row wrap
+	+breakpoint((482px 768px) (orientation portrait))
 		flex-flow: row wrap
 
 
@@ -10,16 +13,22 @@
 .left-side
 	width: 50%
 	background: #ebefe2
+	position: relative
+	z-index: 10
 	+breakpoint(max-width 480px)
 		width: 100%
+	+breakpoint((482px 768px) (orientation portrait))	
+		width: 100%
 .left-side__title
-	width: $left-side-container
+	width: 400px
 	margin: auto
 	margin-bottom: rem(35px)
 	position: relative
 	+breakpoint(max-width 480px)
 		width: 100%
-
+	+breakpoint(min-width 1800px)
+		float: left
+		padding-left: 30px
 .title__h2-dark
 	color: #373e42
 	font-family: SansusWebissimo
@@ -29,6 +38,8 @@
 	text-align: center
 	position: relative
 	padding-bottom: rem(20px)
+	padding-top: rem(40px)
+	line-height: rem(45px)
 	margin: 0
 	&:after
 		content: ''
@@ -38,6 +49,8 @@
 		transform: translate(-50%)
 		width: rem(90px)
 		border-bottom: 3px solid #373e42
+	+breakpoint(min-width 1800px)
+		padding-top: 0
 .svg__about_header
 	fill: #93c42e
 	opacity: .1
@@ -46,20 +59,31 @@
 	left: 50%
 	transform: translate(-50%,-50%)
 	z-index: 2
-	width: 80%
-
+	width: rem(440px)
+	+breakpoint(max-width 480px)
+		width: 60%
+		top: 50%
+	+breakpoint((482px 768px) (orientation portrait))
+		width: 80%
+	+breakpoint(min-width 1800px)
+		width: 90%
+		top: 0%
+		left: 55%
 .left-side__photo-frame
 	max-width: $left-side-container
 	width: rem(400px)
-	// height: rem(400px)
-	height: auto
+	height: rem(400px)
 	overflow: hidden
 	text-align: center
 	margin: 0 auto
 	+breakpoint(max-width 480px)
 		max-width: 100%
+		width: 100%
+		height: auto
 		margin: 0 0
 		box-sizing: margin-box
+	+breakpoint(min-width 1800px)
+		margin: 0
 .left-side__photo
 	width: 100%
 	height: auto
@@ -70,6 +94,9 @@
 		margin: rem(13px) auto
 		margin: 0
 		width: 100%
+	+breakpoint(min-width 1800px)
+		width: rem(400px)
+
 .title__h3-dark
 	color: #566358
 	font-family: SansusWebissimo
@@ -110,15 +137,21 @@
 .right-side
 	width: 50%
 	background: #f4f5f0
+	position: relative
+	z-index: 10
 	+breakpoint(max-width 480px)
 		width: 100%
 		padding: rem(30px) 0
+	+breakpoint((482px 768px) (orientation portrait))
+		width: 100%
 .right-side__title
 	margin: rem(10px) auto rem(35px)
 	width: $right-side-container
 	+breakpoint(max-width 480px)
 		margin: 0 auto
 		width: 80%
+	+breakpoint((482px 768px) (orientation portrait))
+		padding-top: 40px
 
 .right-side__title-container
 	max-width: rem(350px)
@@ -127,10 +160,12 @@
 	position: relative
 .right-side-info
 	margin: auto
-	width: $right-side-container
+	width: 100%
 	+breakpoint(max-width 480px)
 		margin: 0
 		width: 100%
+	+breakpoint((482px 768px) (orientation portrait))
+		width: 67%
 .right-side__diagrams
 	margin: rem(55px) auto
 	width: $right-side-container
@@ -139,6 +174,12 @@
 	+breakpoint(max-width 480px)
 		margin: 0
 		width: 100%
+	+breakpoint((482px 768px) (orientation portrait))
+		display: flex
+		flex-flow: row wrap
+.diagram__title
+	+breakpoint((482px 768px) (orientation portrait))
+		margin: auto
 .title__skill
 	color: #566358
 	font-family: Roboto-Regular
@@ -149,6 +190,8 @@
 	+breakpoint(max-width 480px)
 		margin: 0
 		padding-bottom: 20px
+		text-align: center
+	+breakpoint((482px 768px) (orientation portrait))
 		text-align: center
 .diagram__list
 	padding: 0

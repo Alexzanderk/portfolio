@@ -1,7 +1,7 @@
 .main-content__container.clearfix
 	
 
-	section.left-side
+	section.left-side.clearfix
 		.left-side__title
 			h2.title__h2-dark Обо мне
 			svg.svg__about_header(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
@@ -21,6 +21,13 @@
 				h3.title__h3-dark Чем я могу быть вам полезен
 		.right-side-info
 			p.text__p-about Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+		
+		//- -var name = ['frontend', 'backend']
+		//- -var skill = [['html5', 'css'], ['php', 'node']]
+
+
+		//- +diagram(name, skill)
+
 		ul.right-side__diagrams
 			li.diagram__title.frontend
 				h4.title__skill Frontend
@@ -34,7 +41,7 @@
 					li.diagram__item
 						input.dial(type="text" value="65")
 						.skill__name JavaScript & jQuery
-			li.title.backend 
+			li.diagram__title.backend 
 				h4.title__skill Backend
 				ul.diagram__list.disable
 					li.diagram__item
@@ -49,7 +56,7 @@
 					li.diagram__item
 						input.dial(type="text" value="0")
 						.skill__name Mongo.db
-			li.title.workflow 
+			li.diagram__title.workflow 
 				h4.title__skill WorkFlow
 				ul.diagram__list
 					li.diagram__item

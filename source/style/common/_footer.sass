@@ -13,6 +13,8 @@
 	justify-content: space-between
 	+breakpoint(max-width 480px)
 		flex-flow: row wrap
+	+breakpoint((482px 768px) (orientation portrait))
+		flex-flow: row wrap
 /* LEFT BLOCK */
 .footer__left-side
 	flex: 0 2 auto
@@ -21,6 +23,8 @@
 		width: 100%
 		margin: 0
 		padding: rem(20px) rem(25px)
+	+breakpoint((482px 768px) (orientation portrait))
+		flex: 0 2 50%
 .left-side-text
 	color: #fff
 	font-family: Roboto-regular
@@ -42,6 +46,8 @@
 		margin: 0
 		box-sizing: border-box
 		// flex: 0 0 100%
+	+breakpoint((482px 768px) (orientation portrait))
+		flex: 1 0 50%
 .shape__container
 	border-left: 1px solid rgba(#FFF, .2)
 	border-right: 1px solid rgba(#FFF, .2)
@@ -52,6 +58,9 @@
 		padding: rem(20px) 0
 		width: 100%
 		margin: 0
+	+breakpoint((482px 768px) (orientation portrait))
+		border: none
+		border-left: 1px solid rgba(#FFF, .2)
 	
 .footer-navigation
 .footer-navigation__container
@@ -59,6 +68,8 @@
 	padding: 0
 	margin: 0
 	list-style: none
+	+breakpoint(max-width 480px)
+		text-align: center
 .footer-navigation__item
 	display: inline-block
 	padding: 0 rem(9.5px)
@@ -66,12 +77,18 @@
 		padding-left: rem(30px)
 		+breakpoint(max-width 480px)
 			padding-left: 7px
+		+breakpoint((482px 768px) (orientation portrait))
+			padding-left: rem(30px)
 	&:last-child
 		padding-right: rem(28px)
 		+breakpoint(max-width 480px)
 			padding: 0
+		+breakpoint((482px 768px) (orientation portrait))
+			padding: 0
 	+breakpoint(max-width 480px)
 		padding: 0 5px
+	+breakpoint((482px 768px) (orientation portrait))
+		padding: 0 rem(5px)
 .footer-navigation__link
 	text-decoration: none
 	color: #fff
@@ -85,9 +102,6 @@
 		opacity: .5
 .footer-socials
 	+breakpoint(max-width 480px)
-		// margin: auto
-		// width: 100%
-		// display: block
 		text-align: center
 .footer-socials__list
 	padding: 0
@@ -97,6 +111,8 @@
 	+breakpoint(max-width 480px)
 		padding: 0
 		padding-top: rem(20px)
+	+breakpoint((482px 768px) (orientation portrait))
+		padding-bottom: rem(10px)
 .footer-socials__item
 	display: inline-block
 	padding: 0 rem(10px)
@@ -120,6 +136,9 @@
 		margin: 0
 		padding: rem(20px) rem(15px) rem(17px)
 		text-align: center
+	+breakpoint((482px 768px) (orientation portrait))
+		margin: 0 rem(30px)
+		padding-bottom: rem(30px)
 .text-right-side
 	color: rgba(#fff, .5)
 	box-sizing: border-box

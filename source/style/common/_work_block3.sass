@@ -8,8 +8,14 @@
 	+breakpoint(max-width 480px)
 		padding: 0
 		padding-bottom: 300px
+	+breakpoint((max-width 768px) (orientation portrait))
+		padding: 0
+		padding-bottom: 400px
 .reviews__container
 	+breakpoint(max-width 480px)
+		box-sizing: border-box
+		padding: rem(15px) rem(10px)
+	+breakpoint((max-width 768px) (orientation portrait))
 		box-sizing: border-box
 		padding: rem(15px) rem(10px)
 .reviews__title
@@ -39,7 +45,7 @@
 		font-size: rem(50px)
 		line-height: rem(55px)
 		padding-bottom: rem(26px)
-.svg__about_header
+.svg__about_review
 	fill: #93c42e
 	opacity: .1
 	position: absolute
@@ -54,6 +60,8 @@
 	margin: rem(30px) 0
 	justify-content: center
 	+breakpoint(max-width 480px)
+		flex-flow: column
+	+breakpoint((max-width 768px) (orientation portrait))
 		flex-flow: column
 .reviews__item
 	width: rem(400px)
@@ -74,6 +82,12 @@
 		margin: 0
 		box-sizing: border-box
 		width: 100%
+	+breakpoint((max-width 768px) (orientation portrait))
+		width: 100%
+		padding: 0
+		margin: 0
+		box-sizing: border-box
+
 .reviews__item-photo
 	width: rem(77px)
 	height: rem(77px)
@@ -103,6 +117,9 @@
 	text-align: center
 	margin: auto
 	+breakpoint(max-width 480px)
+		box-sizing: margin-box
+		width: 100%
+	+breakpoint((max-width 768px) (orientation portrait))
 		box-sizing: margin-box
 		width: 100%
 .review-author
@@ -208,7 +225,7 @@
 .svg__portf_arrow_up_icon
 	fill: #fff
 	position: absolute
-	top: 70%
+	bottom: 17%
 	left: 50%
 	transform: translate(-50%,-15%)
 	width: 25px

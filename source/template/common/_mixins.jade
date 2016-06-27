@@ -84,3 +84,15 @@ mixin contact(className, items)
 			
 
 
+//- DIAGRAMS
+
+mixin diagram(className, skill)
+	ul.right-side__diagrams
+		each item, key in className
+			li(class="diagram__title #{className}")
+				h4(class="title__skill #{className}")= className[key]
+				ul.diagram__list
+					each item in skill
+						li.diagram__item
+							input.dial(type="text" value="90")
+							.skill__name= skill[0]

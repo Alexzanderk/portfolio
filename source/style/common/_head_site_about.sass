@@ -4,13 +4,9 @@
 	background-repeat: no-repeat
 	background-size: cover 
 	height: 100vh
-.tringledown__container
-	min-height: 100%
-	margin-bottom: rem(-130px)
-	&:after
-		content: ''
-		display: block
-		height: rem(130px)
+	width: 100%
+	+breakpoint((max-width 768px) (orientation portrait))
+		height: 87vh
 .header__container
 	padding: rem(37px) rem(30px) rem(50px)
 	+breakpoint(max-width 480px)
@@ -44,8 +40,11 @@
 	padding-top: rem(25px)
 
 .sidedown
-	position: relative
-	min-height: rem(130px)
+	width: 100%
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
 .sidedown__container
 	position: absolute
 	bottom: rem(85px)
@@ -66,9 +65,11 @@
 	bottom: 0px
 	left: 0
 	right: 0
-	polygon.left__side__footer
+.left__side_footer
+	fill: #ebefe2
+.right__side_footer
+	fill: #f4f5f0
+	+breakpoint(320px 480px)
 		fill: #ebefe2
-	polygon.right__side__footer
-		fill: #f4f5f0
-		+breakpoint(max-width 480px)
+	+breakpoint((max-width 768px) (orientation portrait))
 		fill: #ebefe2

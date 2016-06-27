@@ -21,6 +21,8 @@
 	+breakpoint(max-width 480px)
 		width: 100%
 		display: none
+	+breakpoint((max-width 768px) (orientation portrait))
+		display: none
 .artcl
 	padding-top: rem(40px)
 .artcl__list
@@ -61,15 +63,26 @@
 		box-sizing: border-box
 		padding: 0 rem(10px)
 		margin-bottom: 150px
+	+breakpoint((max-width 768px) (orientation portrait))
+		width: 100%
+		margin: 0
+		box-sizing: border-box
+		padding: rem(10px) rem(15px)
 .article__item
 	padding: rem(30px)
 	border-bottom: 5px solid rgba(#373e42, .07)
 	&:last-child
 		border: none
+		+breakpoint((max-width 768px) (orientation portrait))
+			padding-bottom: rem(50px)
 	+breakpoint(max-width 480px)
+		padding: 0
+	+breakpoint((max-width 768px) (orientation portrait))
 		padding: 0
 .article__item-title
 	+breakpoint(max-width 480px)
+		padding: rem(30px) 0
+	+breakpoint((max-width 768px) (orientation portrait))
 		padding: rem(30px) 0
 .title__h3
 	color: #566358
@@ -80,8 +93,12 @@
 	padding: rem(10px) 0
 	+breakpoint(max-width 480px)
 		padding: rem(10px) 0
+	+breakpoint((max-width 768px) (orientation portrait))
+		padding: rem(10px) 0
 .article__item-date
 	+breakpoint(max-width 480px)
+		margin: rem(10px) 0
+	+breakpoint((max-width 768px) (orientation portrait))
 		margin: rem(10px) 0
 	.date__text
 		color: rgba(#4e8839, .7)
@@ -90,6 +107,8 @@
 		font-weight: 400
 		margin: rem(25px) 0
 		+breakpoint(max-width 480px)
+			margin: 0
+		+breakpoint((max-width 768px) (orientation portrait))
 			margin: 0
 .article__item-content
 .article__text
