@@ -55,7 +55,7 @@
 	min-height: rem(650px)
 	+breakpoint(max-width 480px)
 		flex-flow: column nowrap
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		flex-flow: column nowrap
 		height: 100%
 
@@ -71,7 +71,7 @@
 	+breakpoint(max-width 480px)
 		width: 100%
 		order: 2
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		width: 100%
 		order: 2
 		height: 25vh
@@ -146,20 +146,20 @@
 	+breakpoint(max-width 480px)
 		width: 100%
 		order: 1
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		width: 100%
 		order: 1
 		height: 50vh
 .slider__preview-img
 	position: absolute
-	top: -9999px
-	bottom: -9999px
-	left: -9999px
-	right: -9999px
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
 	margin: auto
 	max-width: 100%
 	max-height: 100%
-	+breakpoint((max-width 1024px) (orientation landscape))
+	+breakpoint((482px 1024px) (orientation landscape))
 .slider__list
 	margin: auto
 	padding: 0
@@ -189,7 +189,7 @@
 	+breakpoint(max-width 480px)
 		width: 100%
 		order: 3
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		width: 100%
 		order: 3
 		height: 25vh
@@ -206,6 +206,7 @@
 		left: 0
 		right: 0
 		bottom: 0
+
 .slider_btn-link
 .btn__img-preview
 	position: absolute

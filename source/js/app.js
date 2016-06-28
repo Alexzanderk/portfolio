@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+/*KNOB jQuery*/
+
 	$('.dial').knob({
 		'width': 100,
 		'height': 100,
@@ -9,70 +12,10 @@ $(document).ready(function() {
 	});
 
 
-	// $(function () {
-	// 	var imgs = [];
-
-	// 	$.each($('*'), function() {
-
-	// 		var $this = $(this),
-	// 			background = $this.css('background'),
-	// 			img = $this.is('img');
-
-	// 		if (background != 'none') {
-
-	// 			var path = background.replace('url("', '').replace('")', '');
-
-	// 			imgs.push(path);
-	// 		}
-
-	// 		if (img) {
-				
-	// 			var path = $this.attr('src');
-				
-	// 			if (path) {	
-	// 				imgs.push(path);
-	// 			}
-	// 		}
-	// 	});
-
-	// 	console.log(imgs);
-
-	// 	var percents = 1;
-
-
-	// 	for (var i = 0; i<imgs.length; i++) {
-
-	// 		var image = $('<img>', {
-	// 			attr: {
-	// 				src : imgs[i]
-	// 			}
-	// 		});
-
-	// 		image.load(function() {
-	// 			setPercents(imgs.length, percents);
-	// 			percents++;
-	// 		});
-
-	// 	}
-
-	// 	function setPercents(total, current) {
-
-	// 		if (percent >= 1) {
-	// 			$('.head__wrapper').css('display', 'block');
-	// 		}
-
-	// 		var percent = Math.ceil(current / total * 100);
-
-	// 		$('.preload').css({'stroke-dasharray' : percent + '%'})
-	// 		$('.preload__svg text').text(percent + '%')
-
-	// 	}
-
-	// });
 
 /*SLIDER  IN WORK */
 
-	// (function slider () {
+	(function slider () {
 		var counter = 1;
 
 		$('.slider_btn-link').on('click', function(e){
@@ -103,7 +46,7 @@ $(document).ready(function() {
 			counter++;
 
 		});
-	// });
+	});
 
 
 /*Map*/
@@ -295,5 +238,41 @@ $(document).ready(function() {
 
 
         })();
+
+
+/*Flipper*/
+
+  	var btn = $('.btn_autorization');
+	var $this = btn;
+	
+	btn.click(function(event) {
+		$this.fadeOut(50);
+		$('.flip__container').toggleClass('flipped');
+	});
+
+	var btn_main = $('.autorization-btn__link');
+
+	btn_main.click(function(event) {
+		btn.fadeIn(200);
+		$('.flip__container').toggleClass('flipped');
+	});
+
+/*Hamburger clicked*/
+	
+		var link = $('.hamburg__wrapper')
+
+		link.click(function(event) {
+			link.toggleClass('clicked');
+
+			if ($(this).hasClass('clicked')) {
+				$('.modal__menu').css('display', 'block');
+				$('html, body').css('overflow', 'hidden');
+			} else {
+				$('.modal__menu').css('display', 'none');
+				$('html, body').css('overflow', 'auto');
+			}
+
+		});
+
 
 });

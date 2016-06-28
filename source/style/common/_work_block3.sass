@@ -7,15 +7,16 @@
 	position: relative
 	+breakpoint(max-width 480px)
 		padding: 0
+		// padding-top: rem(30px)
 		padding-bottom: 300px
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		padding: 0
 		padding-bottom: 400px
 .reviews__container
 	+breakpoint(max-width 480px)
 		box-sizing: border-box
 		padding: rem(15px) rem(10px)
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		box-sizing: border-box
 		padding: rem(15px) rem(10px)
 .reviews__title
@@ -61,12 +62,13 @@
 	justify-content: center
 	+breakpoint(max-width 480px)
 		flex-flow: column
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		flex-flow: column
 .reviews__item
-	width: rem(400px)
+	max-width: rem(400px)
 	padding-right: rem(20px)
 	position: relative
+	// display: none
 	background-image: url(../img/sprite.svg#quote)
 	&:last-child
 		padding-right: 0
@@ -82,7 +84,7 @@
 		margin: 0
 		box-sizing: border-box
 		width: 100%
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		width: 100%
 		padding: 0
 		margin: 0
@@ -105,6 +107,7 @@
 	font-size: rem(16px)
 	font-style: italic
 	line-height: rem(26px)
+	max-width: 100%
 .svg__quote
 	fill: #93c42e
 	opacity: .1
@@ -119,7 +122,7 @@
 	+breakpoint(max-width 480px)
 		box-sizing: margin-box
 		width: 100%
-	+breakpoint((max-width 768px) (orientation portrait))
+	+breakpoint((482px 768px) (orientation portrait))
 		box-sizing: margin-box
 		width: 100%
 .review-author

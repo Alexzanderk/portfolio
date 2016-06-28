@@ -1,6 +1,6 @@
 .svg__arrow_down
 	display: block
-	width:rem( 25p)x
+	width:rem( 5px)
 
 
 .socials
@@ -24,3 +24,47 @@
 .social-span
 	position: absolute
 	left: -9999px
+
+
+/* Hamburg style menu-hamburger */
+
+.hamburg__wrapper
+	width: 50px
+	height: 28px
+	position: relative
+	float: right
+	display: block
+	cursor: pointer
+	z-index: 150
+	&:hover > .bar
+		background-color: darken(#FFF, 30%)
+		border: 1px solid darken(#FFF, 30%)
+.clicked .top
+	transform: rotate(45deg)
+	top: 40%
+.clicked .bottom
+	transform: rotate(-45deg)
+	top: 40%
+.clicked .middle
+	display: none
+.bar
+	width: 40px
+	height: 4px
+	background-color: #FFF
+	border: 1px solid #fff
+	position: absolute
+	border-radius: 5px
+	transition: all 0.1s
+.top
+	left: 15%
+	top: 0%
+	transition: all 0.2s
+.middle
+	left: 15%
+	top: 50%
+	transition: all 0.25s
+.bottom
+	left: 15%
+	top: 100%
+	transition: all 0.2s
+
