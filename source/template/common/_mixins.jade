@@ -16,10 +16,8 @@ mixin navi_links (className, items, activeItem)
 				-var i=0
 				each link, nav in items 
 					-i++
-
-					li(class="#{className}__item" + ( (i === activeItem) ? ' #{className}__item_active' : '' ))
+					li(class="#{className}__item" + ( (i === 0) ? ' #{className}__item_active' : '' ))
 						a(href="#{link}" class="#{className}__link")= nav
-						-console.log('i')
 
 //- Social icon 
 mixin social (className, items)
@@ -31,16 +29,26 @@ mixin social (className, items)
 						span.social-span= cont[2]
 
 //- Article list
+//- mixin articlelist (className, items, activeItem)
+//- 	div(class="#{className}")
+//- 		ul(class="#{className}__list" id="article__list")
+//- 			each list, numb in items
+//- 				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item-active' : ''))
+//- 					a(href="#" class="#{className}__link")= list
+
+
 mixin articlelist (className, items, activeItem)
 	div(class="#{className}")
-		ul(class="#{className}__list")
-			each list, numb in items
-				li(class="#{className}__item" + ( (numb == activeItem) ? ' #{className}__item-active' : ''))
-					a(href="#" class="#{className}__link")= list
+		ul(class="#{className}__list" id="article__list")
+			-var i=0
+			each list, numb in items 
+				-i++
+				li(class="#{className}__item" + ( (i == 1) ? ' #{className}__item-active' : ''))
+					a(href="##{list}" class="#{className}__link")= numb
 
 //- Article item
 mixin articles(idName, title, date, content)
-	article(id="#{idName}" class="article__item")
+	article(id="#{idName}" class="article__item section")
 		div(class="article__item-title")
 			h3.title__h3=title
 		div(class="article__item-date")

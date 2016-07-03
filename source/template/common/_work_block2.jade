@@ -26,29 +26,35 @@
 
 			//- Slider preview
 			.slider.slider__preview
-				ul.slider__list
-					li.slider__item.slider__item_active
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
-					li.slider__item
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
-					li.slider__item
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
-					li.slider__item
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
-					li.slider__item
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
-					li.slider__item
-						img.slider__preview-img(src="assets/img/site1.png", alt="")
+				.display__container
+					img(src="assets/img/site2.png", alt="" class="slider__display-pic")
 			
 			//- Slider control
 			.slider.slider__btn
 				.slider__bg
-					a.slider_btn-link(href="")
-						img.btn__img-preview(src="assets/img/site2.png", alt="site" class="slider__controls-item slider__controls-item_prev")
+					a.slider_btn-link.link__down(href="")
+						ul.slider__list
+							li.slider__item.slider__item_active
+								img.slider__preview-img(src="assets/img/site1-1.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-2.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-3.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-4.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-5.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-6.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-7.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-8.png", alt="")
+						//- img.btn__img-preview(src="assets/img/site2.png", alt="site" class="slider__controls-item slider__controls-item_prev")
 						svg.svg__portf_arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_down")
 				.slider__bg
-					a.slider_btn-link(href="")
-						img.btn__img-preview(src="assets/img/site3.png", alt="site" class="slider__controls-item slider__controls-item_next")
+					a.slider_btn-link.link__up(href="")
+						//- img.btn__img-preview(src="assets/img/site3.png", alt="site" class="slider__controls-item slider__controls-item_next")
 						svg.svg__portf_arrow_up(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")
