@@ -177,56 +177,6 @@
 
 
 /* Slider controls */
-.link__down
-	.slider__list
-		margin: auto
-		padding: 0
-		margin: 0
-		list-style: none
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		
-	.slider__item
-		width: 100%
-		height: 100%
-		position: absolute
-		left: 0
-		top: -100%
-		&_active
-			top: 0%
-.slider__list
-	list-style: none
-	margin: 0
-	padding: 0
-
-.slider__item_active
-	z-index: 2
-	position: relative
-.inslide
-	z-index: 4
-
-.link__up
-	.slider__list
-		margin: auto
-		padding: 0
-		margin: 0
-		list-style: none
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-	.slider__item
-		width: 100%
-		height: 100%
-		position: absolute
-		left: 0
-		bottom: -100%
-		&_active
-			bottom: 0%
 .slider__btn
 	width: 50%
 	height: 30%
@@ -256,6 +206,61 @@
 .slider_btn-link
 	width: 100%
 	height: 100%
+
+.slider__list
+	list-style: none
+	margin: 0
+	padding: 0
+	// overflow: hidden
+
+.link__down
+	.slider__list
+		margin: auto
+		padding: 0
+		margin: 0
+		list-style: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		
+	.slider__item
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: -100%
+		&_active
+			top: 0%
+
+.slider__item_active
+	z-index: 2
+	position: relative
+
+.inslide
+	z-index: 4
+	
+
+.link__up
+	.slider__list
+		margin: auto
+		padding: 0
+		margin: 0
+		list-style: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	.slider__item
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		bottom: -100%
+		&_active
+			bottom: 0%
 .btn__img-preview
 	position: absolute
 	top: 0px
@@ -281,6 +286,23 @@
 	transform: translate(-50%,-50%)
 	fill: #fff
 	z-index: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btn
 	position: relative
 	border-radius: rem(30px)

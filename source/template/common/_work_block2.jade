@@ -7,7 +7,7 @@
 		.slider__container
 
 			//- Slider description
-			.slider.slider__description
+			.slider__description
 				.description__title
 					| Site number 1 Далеко-далеко за.
 				.description__skill
@@ -25,14 +25,14 @@
 
 
 			//- Slider preview
-			.slider.slider__preview
+			.slider__preview
 				.display__container
 					img(src="assets/img/site2.png", alt="" class="slider__display-pic")
 			
 			//- Slider control
 			.slider.slider__btn
 				.slider__bg
-					a.slider_btn-link.link__down(href="")
+					a.slider_btn-link.link__down(href="#")
 						ul.slider__list
 							li.slider__item.slider__item_active
 								img.slider__preview-img(src="assets/img/site1-1.png", alt="")
@@ -50,11 +50,9 @@
 								img.slider__preview-img(src="assets/img/site1-7.png", alt="")
 							li.slider__item
 								img.slider__preview-img(src="assets/img/site1-8.png", alt="")
-						//- img.btn__img-preview(src="assets/img/site2.png", alt="site" class="slider__controls-item slider__controls-item_prev")
 						svg.svg__portf_arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_down")
 				.slider__bg
-					a.slider_btn-link.link__up(href="")
-						//- img.btn__img-preview(src="assets/img/site3.png", alt="site" class="slider__controls-item slider__controls-item_next")
+					a.slider_btn-link.link__up(href="#")
 						svg.svg__portf_arrow_up(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")
