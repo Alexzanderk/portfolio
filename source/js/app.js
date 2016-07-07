@@ -674,3 +674,33 @@ $(document).ready(function() {
 		slider.init();
 	}
 });
+
+
+/*BLUR */
+
+$(document).ready(function() {
+		setBlur();
+});
+
+$(window).resize(function() {
+	setBlur();
+	
+});
+
+
+function setBlur() {
+	var 
+			section = $('.reviews'),
+			blurSection = $('.blur__bg'),
+			container = $('.contact-with-me'),
+			posTop = section.offset().bottom - container.offset().bottom;
+
+			console.log(section);
+			console.log(container);
+			console.log(posTop);
+
+	blurSection.css({
+		// 'background-size' : imgWidth + 'px' + ' ' + 'auto',
+		'background-position' : 'center ' + posTop + 'px'
+	});
+}

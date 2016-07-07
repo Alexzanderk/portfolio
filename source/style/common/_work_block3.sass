@@ -1,8 +1,9 @@
 .reviews
 	background: url(../img/bg2.jpg)
 	background-repeat: no-repeat
-	background-position: center
-	background-size: cover
+	background-position: center bottom
+	background-size: 120%
+	// background-size: cover
 	padding: rem(20px) 0 rem(150px)
 	position: relative
 	// z-index: 100
@@ -136,13 +137,38 @@
 	line-height: rem(24px)
 	color: #373e42
 	font-weight: 400
+
+	
+
 .contact-with-me
+
+	// background-size: cover
 	max-width: rem(380px)
 	min-height: rem(460px)
 	background-color: rgba(#e0e0dc, .6)
 	border-radius: rem(5px)
 	margin: 0 auto rem(150px)
+	overflow: hidden
+	position: relative
 	+breakpoint(max-width 480px)
+
+.blur__bg
+	// width: 100%
+	// height: 100%
+	background-image: url(../img/bg2.jpg)
+	background-repeat: no-repeat
+	background-position: center bottom
+	// background-size: 120%
+	// width: 100%
+	// height: 100%
+	// filter: blur(20px)
+	// -webkit-filter: blur(20px)
+	position: absolute
+	bottom: 0
+	top: 0
+	left: 0
+	right: 0
+	z-index: 2
 
 .contact-with-me__title
 .title__h3-review
@@ -165,7 +191,8 @@
 		width: rem(90px)
 		border-bottom: 3px solid #566358
 .contact-with-me__form
-	
+	position: relative
+	z-index: 10
 .contact__form
 	width: 100%
 	margin: rem(30px) 0 0
