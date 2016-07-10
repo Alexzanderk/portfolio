@@ -1,22 +1,23 @@
 .reviews
 	.reviews__container
-		.reviews__title
-			h2.title__h2-review Что обо мне говорят
-			svg.svg__about_review(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
-				use.svg__icon(xlink:href= "assets/img/sprite.svg#about_header")
-		.reviews__list
-			+review('assets/img/aut1.jpg', 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'Ковальчук Дмитрий', '— основатель Loftschool')
-			+review('assets/img/aut2.jpg', 'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'Зар Захаров', '— главный преподаватель')
-		.contact-with-me
-			.blur__bg
-			//- .contact-with-me__form
-				h3.title__h3-review Связаться со мной
-				form.contact__form
-					input(type="text" placeholder="Имя" class="form__name" name="name")
-					input(type="email" placeholder="Email" class="form__mail" name="mail")
-					textarea(cols="30", rows="5" placeholder="Ваше сообщение" class="form__text" name="text")
-					input(type="submit" class="btn__review" name="ok")
-					input(type="reset" class="btn__review" name="reset")
-		a(href="#" class="sideup__link")
-			svg.svg__portf_arrow_up_icon(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 	171.5 132.5")
-				use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")
+		img(src="assets/img/bg2.jpg", alt="" class="img__bg")
+	.reviews__title
+		h2.title__h2-review Что обо мне говорят
+		svg.svg__about_review(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+			use.svg__icon(xlink:href= "assets/img/sprite.svg#about_header")
+	.reviews__list
+		+review('assets/img/aut1.jpg', 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'Ковальчук Дмитрий', '— основатель Loftschool')
+		+review('assets/img/aut2.jpg', 'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'Зар Захаров', '— главный преподаватель')
+	.contact-with-me
+		.blur__bg
+		.contact-with-me__form
+			h3.title__h3-review Связаться со мной
+			form.contact__form
+				input(type="text" placeholder="Имя" class="form__name" name="name")
+				input(type="email" placeholder="Email" class="form__mail" name="mail")
+				textarea(cols="30", rows="5" placeholder="Ваше сообщение" class="form__text" name="text")
+				input(type="submit" class="btn__review" name="ok")
+				input(type="reset" class="btn__review" name="reset")
+	a(href="#" class="sideup__link")
+		svg.svg__portf_arrow_up_icon(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 	171.5 132.5")
+			use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")

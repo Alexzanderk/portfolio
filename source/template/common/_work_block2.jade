@@ -5,34 +5,48 @@
 			svg.svg__works(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 				use.svg__icon(xlink:href= "assets/img/sprite.svg#works_header")
 		.slider__container
-
 			//- Slider description
 			.slider__description
 				.description__title
 					| Site number 1 Далеко-далеко за.
 				.description__skill
 					ul.skill__list
-						li.skill__item.uppercase Html
-						li.skill__item.uppercase Sass
-						li.skill__item.uppercase Jquery
-						li.skill__item.uppercase Jade
-						li.skill__item.uppercase Bower
-						li.skill__item.uppercase Git
+						li.skill__item.uppercase 
+						li.skill__item.uppercase 
+						li.skill__item.uppercase
+						li.skill__item.uppercase 
+						li.skill__item.uppercase 
+						//- li.skill__item.uppercase Git
 				.description__btn
-					a.slider__link(href="#" class="btn") Посмотреть сайт
+					a.slider__link(href="#" target="_blank" class="btn") Посмотреть сайт
 						svg.svg__link(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#link")
-
-
 			//- Slider preview
 			.slider__preview
-				.display__container
-					img(src="assets/img/site2.png", alt="" class="slider__display-pic")
+				//- .display__container
+					//- img(src="assets/img/site2.png", alt="" class="slider__display-pic")
+				ul.slider__list
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-1.png", alt="")
+						li.slider__item.slider__item_active
+							img.slider__preview-img(src="assets/img/site1-2.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-3.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-4.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-5.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-6.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-7.png", alt="")
+						li.slider__item
+							img.slider__preview-img(src="assets/img/site1-8.png", alt="")
 			
 			//- Slider control
 			.slider.slider__btn
 				.slider__bg
-					a.slider_btn-link.link__down(href="#")
+					button.slider_btn-link.link__down(href="#")
 						ul.slider__list
 							li.slider__item.slider__item_active
 								img.slider__preview-img(src="assets/img/site1-1.png", alt="")
@@ -53,6 +67,23 @@
 						svg.svg__portf_arrow_down(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_down")
 				.slider__bg
-					a.slider_btn-link.link__up(href="#")
+					button.slider_btn-link.link__up(href="#")
+						ul.slider__list
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-1.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-2.png", alt="")
+							li.slider__item.slider__item_active
+								img.slider__preview-img(src="assets/img/site1-3.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-4.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-5.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-6.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-7.png", alt="")
+							li.slider__item
+								img.slider__preview-img(src="assets/img/site1-8.png", alt="")
 						svg.svg__portf_arrow_up(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
 							use.svg__icon(xlink:href= "assets/img/sprite.svg#portf_arrow_up")

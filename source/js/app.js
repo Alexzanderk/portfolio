@@ -510,170 +510,261 @@ $(document).ready(function() {
 
 
 
-var slider = (function () {
+// var slider = (function () {
 
-	  var works = [
-    {
-      "srcImage"      : "/assets/img/site1-1.png",
-      "title"         : "Первый пример",
-      "technologies"  : ["html", "css", "javascript"],
-      "link"          : "https://loftschool.com/"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-2.png",
-      "title"         : "Второй пример",
-      "technologies"  : ["html", "css", "javascript", "php"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-3.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-4.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-5.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-6.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-7.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/site1-8.png",
-      "title"         : "Четвёртый пример",
-      "technologies"  : ["php", "css", "html"],
-      "link"          : "#"
-    }
-  ];
+// 		var works = [
+// 		{
+// 			"srcImage"		: "/assets/img/site1-1.png",
+// 			"title"				: "Site number 1",
+// 			"skill"				: ["html", "css", "javascript"],
+// 			"link"				: "#"
+// 		},
+// 		{
+// 			"srcImage"      : "/assets/img/site1-2.png",
+// 			"title"         : "Site number 2",
+// 			"skill"				  : ["html", "css", "javascript", "php"],
+// 			"link"          : "#"
+// 		},
+// 		{
+// 			"srcImage"      : "/assets/img/site1-3.png",
+// 			"title"         : "Site number 3",
+// 			"skill"				  : ["html", "css"],
+// 			"link"          : "#"
+// 		},
+// 		{
+// 			"srcImage"			: "/assets/img/site1-4.png",
+// 			"title"					: "Site number 4",
+// 			"skill"					: ["html", "css"],
+// 			"link"					: "#"
+// 		},
+// 		{
+// 			"srcImage"			: "/assets/img/site1-5.png",
+// 			"title"					: "Site number 5",
+// 			"skill"					: ["html", "css"],
+// 			"link"					: "#"
+// 		},
+// 		{
+// 			"srcImage"			: "/assets/img/site1-6.png",
+// 			"title"					: "Site number 6",
+// 			"skill"					: ["html", "css"],
+// 			"link"					: "#"
+// 		},
+// 		{
+// 			"srcImage"			: "/assets/img/site1-7.png",
+// 			"title"					: "Site number 7",
+// 			"skill"					: ["html", "css"],
+// 			"link"					: "#"
+// 		},
+// 		{
+// 			"srcImage"			: "/assets/img/site1-8.png",
+// 			"title"					: "Site number 8",
+// 			"skill"					: ["php", "css", "html"],
+// 			"link"					: "#"
+// 		}
+//   ];
 	
-// privat
-	return {
-		init: function (){
 
-			var _this = this;
+// 			var
+// 					flag = true;
 
-			var 
-					btnContent = $('.slider__list'),
-					btnClone = btnContent.clone(),
-					btnUp = $('.link__up');
-
-			btnUp.append(btnClone);
+// 			var slideIndex = function (slide) {
+// 				return $('.display__container .slider__item').index(slide);
+// 			};
 
 
-			$('.slider_btn-link').on('click', function(event) {
-				event.preventDefault();
+// // privat
+// 	return {
+// 		init: function () {
+
+// 			var _this = this;
+// 			$('.slider_btn-link').on('click', function(event) {
+// 				event.preventDefault();
+
+// 				var 
+// 						$this = $(this),
+// 						slides = $this.find('.slider__item'),
+// 						activeSlide = slides.filter('.slider__item_active'),
+// 						nextSlide = activeSlide.next(),
+// 						prevSlide = activeSlide.prev(),
+// 						firstSlide = slides.first(),
+// 						lastSlide = slides.last();
+
+// 				var 
+// 						preview = $('.display__container'),
+// 						previewSlides = preview.find('.slider__list').find('.slider__item'),
+// 						activeSlidePreview = previewSlides.filter('.slider__item_active'),
+// 						nextSlidePreview = activeSlidePreview.next(),
+// 						prevSlidePreview = activeSlidePreview.prev(),
+// 						firstSlidePreview = previewSlides.first(),
+// 						lastSlidePreview = previewSlides.last();
+
+// 				var 
+// 						slidesUp = $('.link__up').find('.slider__list').find('.slider__item'),
+// 						activeSlideUp = slidesUp.filter('.slider__item_active'),
+// 						prevSlideUp = activeSlideUp.prev(),
+// 						lastSlideUp = slidesUp.last();
 				
-				var 
-						$this = $(this),
-						slides = $this.closest('.slider').find('.slider__item'),
-						activeSlide = slides.filter('.slider__item_active'),
-						nextSlide = activeSlide.next(),
-						prevSlide = activeSlide.prev(),
-						firstSlide = slides.first(),
-						lastSlide = slides.last();
-
-				// console.log(slides);
-
-				if ($this.hasClass('link__down')) {
-
-						if (nextSlide.length) {
-
-						_this.moveSlide(nextSlide, 'up');
-							
-						} else {
-
-						_this.moveSlide(firstSlide, 'up');
-						
-						}
-				} else {
-
-						if (prevSlide.length) {
-
-						_this.moveSlide(prevSlide, 'down');
-							
-						} else {
-
-						_this.moveSlide(lastSlide, 'down');
-
-						}
-				}
-
-			});
-
-		},
-
-		moveSlide: function(slide, direction){
-
-			var 
-					container = slide.closest('.slider'),
-					slides = container.find('.slider__item'),
-					activeSlide = slides.filter('.slider__item_active'),
-					slideHeight = slides.height(),
-					duration = 500,
-					reqCssPosition = 0,
-					reqSlideStrafe = 0;
+// 				var
+// 						slidesDown = $('.link__down').find('.slider__list').find('.slider__item'),
+// 						activeSlideDown = slidesDown.filter('.slider__item_active'),
+// 						nextSlideDown = activeSlideDown.next(),
+// 						firstSlideDown = slidesDown.first();
 
 
+// 				if (flag) {
+// 					flag = false;
+// 					if ($this.hasClass('link__down')) {
 
-			// console.log(slideHeight);
-			
-			if (direction === 'up') {
-					reqCssPosition = -slideHeight;
-					reqSlideStrafe = slideHeight;
+// 						if (nextSlide.length) {
+// 							_this.moveSlide(nextSlide, 'down');
+// 						} else {
+// 							_this.moveSlide(lastSlide, 'down');
+// 						}
+					
 
-			} else if (direction === 'down') {
-				reqCssPosition = slideHeight;
-				reqSlideStrafe = -slideHeight;
-			}
+// 						if (nextSlideDown.length) {
+// 							_this.moveSlide(nextSlideDown, 'up');
+// 						} else {
+// 							_this.moveSlide(firstSlideDown, 'up');
+// 						}
+
+// 						if (nextSlidePreview.length) {
+// 							_this.descriptionSlide(slideIndex(prevSlidePreview));
+// 							_this.mainSlide(prevSlidePreview);
+// 						} else {
+// 							_this.descriptionSlide(slideIndex(lastSlidePreview));
+// 							_this.mainSlide(lastSlidePreview);
+// 						}
+					
+// 				} else {
+// 					if (nextSlide.length) {
+// 						_this.moveSlide(prevSlide, 'up');
+// 					} else {
+// 						_this.moveSlide(lastSlide, 'up');
+// 					}
+
+// 					if (prevSlideUp.length) {
+// 						_this.moveSlide(prevSlideUp, 'down');
+// 					} else {
+// 						_this.moveSlide(lastSlideUp, 'down');
+// 					}
+
+// 					if (prevSlidePreview.length) {
+// 						_this.descriptionSlide(slideIndex(nextSlidePreview));
+// 						_this.mainSlide(nextSlidePreview);
+// 					} else {
+// 						_this.descriptionSlide(slideIndex(firstSlidePreview));
+// 						_this.mainSlide(firstSlidePreview);
+// 					}
+// 				}
+// }
+				
+// 			});
+
+// 		},
+
+// 		moveSlide: function (slide, direction) {
+
+// 			var 
+// 					container = slide.closest('.slider'),
+// 					slides = container.find('.slider__item'),
+// 					activeSlide = slides.filter('.slider__item_active'),
+// 					slideHeight = slides.height(),
+// 					duration = 500,
+// 					reqCssPosition = 0,
+// 					reqSlideStrafe = 0;
+
+// 			if (direction === 'up') {
+// 					reqCssPosition = -slideHeight;
+// 					reqSlideStrafe = slideHeight;
+
+// 			} else if (direction === 'down') {
+// 				reqCssPosition = slideHeight;
+// 				reqSlideStrafe = -slideHeight;
+// 			}
+
+// 			slide.css('top', reqCssPosition).addClass('inslide');
+
+// 			var movableSlide = slides.filter('.inslide');
+// 			activeSlide.animate({top: reqSlideStrafe}, duration, function () {
+// 				if (direction === 'down') {
+// 					reqCssPosition = slideHeight;
+// 					reqSlideStrafe = -slideHeight; 
+// 					var container = $('.slider');
+// 				} else if (direction === 'up') {
+// 					reqCssPosition = -slideHeight;
+// 					reqSlideStrafe = slideHeight;
+// 				}
+// 			});
+
+// 			movableSlide.animate({top: 0}, duration, function () {
+// 				var $this = $(this);
+
+// 				slides.css('top', 0).removeClass('slider__item_active');
+// 				$this.toggleClass('inslide slider__item_active');
+// 			});
+
+// 		},
+
+// 		mainSlide: function (slide) {
+
+// 			var
+// 					container = slide.closest('.slider__container'),
+// 					previewContainer = container.find('.slider__preview').find('.display__container'),
+// 					slides = previewContainer.find('.slider__list').find('.slider__item'),
+// 					activeSlide = slides.filter('.slider__item_active'),
+// 					duration = 500;
 
 
-			// console.log(slide);
-			slide.css('top', reqCssPosition).addClass('inslide');
+// 			activeSlide.animate({opacity: 0}, duration);
+// 			slide.animate({opacity: 1}, duration, function(){
+// 				activeSlide.removeClass('.slider__item_active');
+// 				slide.addClass('.slider__item_active');
+// 				flag = true;
+// 			});
+
+// 		},
 
 
-			var movableSlide = slides.filter('.inslide');
-			activeSlide.animate({top: reqSlideStrafe}, duration);
-			movableSlide.animate({top: 0}, duration, function() {
-				var $this = $(this);
-				slides.css('top', "-100%").removeClass('slider__item_active');
+// 		descriptionSlide: function (slide) {
 
-				$this.toggleClass('inslide slider__item_active');
+// 			var
+// 					// container = $('.slider__description'),
+// 					descriptionContainer = $('.slider__description'),
+// 					slideTitle = descriptionContainer.find('.description__title'),
+// 					slideSkill = descriptionContainer.find('.description__skill').find('.skill__list').find('.skill__item'),
+// 					slideLink = descriptionContainer.find('.description__btn').find('.slider__link');
 
-			});
+// 			slideTitle.text(works[slide].title);
+// 			slideSkill.text(function(){
+// 				var skill = "", i=0;
+// 				for(; i<works[slide].skill.length; i++) {
+// 					if (i !=works[slide].skill.length - 1) {
+// 						skill += works[slide].skill[i];
+// 					} else {
+// 						skill += works[slide].skill[i];
+// 					}
+// 				}
+// 				return skill;
+// 			});
+// 			slideLink.attr('src', works[slide].link);
+// 		}
 
-		}
-	}
 
 
 
 
+// 	}
 
 
+// }());
 
-}());
 
-$(document).ready(function() {
-	if ($('.slider').length) {
-		slider.init();
-	}
-});
+// $(document).ready(function() {
+// 	if ($('.slider__container').length) {
+// 		slider.init();
+// 	}
+// });
 
 
 /*BLUR */
@@ -690,17 +781,225 @@ $(window).resize(function() {
 
 function setBlur() {
 	var 
-			section = $('.reviews'),
-			blurSection = $('.blur__bg'),
-			container = $('.contact-with-me'),
-			posTop = section.offset().bottom - container.offset().bottom;
+			imgWidth = $('.reviews__container').width(),
+			blur = $('.blur__bg'),
+			blurSection = $('.reviews'),
+			posTop = blurSection.offset().top - blur.offset().top,
+			posLeft = blurSection.offset().left - blur.offset().left;
 
-			console.log(section);
-			console.log(container);
-			console.log(posTop);
-
-	blurSection.css({
-		// 'background-size' : imgWidth + 'px' + ' ' + 'auto',
-		'background-position' : 'center ' + posTop + 'px'
+			blur.css({
+		'background-size' : imgWidth + 'px' + ' ' + 'auto',
+		'background-position' : posLeft + 'px' + ' ' + posTop + 'px'
 	});
-}
+};
+
+
+
+
+
+
+
+
+
+
+var slider = (function () {
+/*Объект с работами*/
+		var works = [  
+		{
+			src		: "/assets/img/site1-1.png",
+			title	: "Site number 1",
+			skill	: ["html", "css", "javascript"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-2.png",
+			title	: "Site number 2",
+			skill	: ["html", "css", "javascript", "php"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-3.png",
+			title	: "Site number 3",
+			skill	: ["html", "css"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-4.png",
+			title	: "Site number 4",
+			skill	: ["html", "css"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-5.png",
+			title	: "Site number 5",
+			skill	: ["html", "css"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-6.png",
+			title	: "Site number 6",
+			skill	: ["html", "css"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-7.png",
+			title	: "Site number 7",
+			skill	: ["html", "css"],
+			link	: "http://google.com.ua"
+		},
+		{
+			src		: "/assets/img/site1-8.png",
+			title	: "Site number 8",
+			skill	: ["php", "css", "html"],
+			link	: "http://google.com.ua"
+		}
+];
+
+
+/*save slider container*/
+  var slider = $('.slider__container');
+/*save preview window*/
+  var	previews = slider.find('.slider__preview').find('.slider__list').find('.slider__item');
+/*save decription window*/
+  var descriptionContainer = slider.find('.slider__description'),
+  		descriptionTitle = descriptionContainer.find('.description__title'),
+  		descriptionSkillContainer = descriptionContainer.find('.description__skill'),
+  		descriptionSkillItem = descriptionSkillContainer.find('.skill__item'),
+  		decriptionLink = descriptionContainer.find('.description__btn').find('.slider__link');
+/*save slider controls*/
+  var controls = slider.find('.slider').find('.slider_btn-link');
+/*Flag*/
+
+/*Иннициализация функции*/
+	return {
+		init: function () {
+
+/*save this object*/
+			var _this = this;
+			$(controls).on('click', function(event) {
+				event.preventDefault();
+
+					var thisButton = $(this), /*Сохраняем кнопку по которой нажали */
+							slides = thisButton.find('.slider__item'), /*Находим все слайды в кнопке*/
+							activeSlide = slides.filter('.slider__item_active'), /*Находим активный слайд*/
+							// nextSlide = activeSlide.next(), /*Сохраняем следующий слайд*/
+							// prevSlide = activeSlide.prev(), /*Сохраняем предыдущий слайд*/
+							thisSlideIndex = slides.index(activeSlide), /*Сохраняем индекс активного слайда*/
+							heightSlide = activeSlide.height();
+					
+					var otherButton = thisButton.parent().siblings().find('.slider_btn-link'), /*Сохраняем другую кнопку*/
+							otherSlides = otherButton.find('.slider__item'), /*Сохраняем слайды другой кнопки*/
+							otherActiveSlide = otherSlides.filter('.slider__item_active'), /*находим активный слайд*/
+							// otherNextSlide = otherActiveSlide.next(), /*след. слайд*/
+							// otherPrevSlide = otherActiveSlide.prev(), /*предыдущий слайд*/
+							otherSlideIndex = otherSlides.index(otherActiveSlide); /*Сохраняем индекс активного слайда*/
+					
+					var activePreview = previews.filter('.slider__item_active'), /*Сохраняем активный слайд*/
+							indexPreview = previews.index(activePreview); /*сохраняем индекс*/
+		
+					if (thisButton.hasClass('link__down')) { /*Задаем условие для кнопки вниз*/
+						thisSlideIndex = thisSlideIndex >= slides.length-1 ? 0 : thisSlideIndex+1;
+						otherSlideIndex = (otherSlideIndex >= otherSlides.length-1) ? 0 : otherSlideIndex+1;
+						indexPreview = (indexPreview >= previews.length-1) ? 0 : indexPreview+1;
+
+						// slides.css('top', '-100%');
+
+					} else {
+						thisSlideIndex--;
+						otherSlideIndex--;
+						indexPreview--;
+
+						// otherSlides.css('top', '100%');
+
+					}
+
+					function noAnimate(){ /* Отключаем действие кнопок во время анимации*/
+						thisButton.prop('disabled', true); 
+						otherButton.prop('disabled', true);
+
+						setTimeout(function(){
+							thisButton.prop('disabled', false);
+							otherButton.prop('disabled', false);
+						}, 500);
+					}
+
+						
+
+			function moveSlide() {
+				var thisEqIndex = slides.eq(thisSlideIndex), 		/*Сохраняем индекс слайд текущей кнопки*/
+					otherEqIndex = otherSlides.eq(otherSlideIndex); /*Сохраняем индекс слайд другой кнопки*/
+
+				thisEqIndex.removeClass('up').addClass('slider__item_active down'); /*Передаем анимацию на слайд*/
+				activeSlide.removeClass('slider__item_active up').addClass('down'); /*удаляем с предыдущего активного слайда анимацию и класс*/
+
+				otherEqIndex.removeClass('down').addClass('slider__item_active up'); /*дублируем на соседнюю кнопку*/
+				otherActiveSlide.removeClass('slider__item_active down').addClass('up'); 
+				
+					/*Анимация на JS*/
+				// activeSlide.animate({top: 100 + '%'}, 500);
+				// thisEqIndex.animate({top: 0}, 500, function (){
+				// 	var $this = $(this);
+				// 	slides.css('top', '-100%');
+				// 	activeSlide.removeClass('slider__item_active').css('top', '-100%');
+				// 	$this.addClass('slider__item_active').css('top', '0');
+				// });
+
+				// otherActiveSlide.animate({top: -100 + '%'}, 500);
+				// otherEqIndex.animate({top: 0 + '%'}, 500, function (){
+				// 	var $this = $(this);
+				// 	otherSlides.css('top', '100%');
+				// 	otherActiveSlide.removeClass('slider__item_active').css('top', '100%');
+				// 	$this.addClass('slider__item_active').css('top', '0');
+				// });
+
+			}
+
+
+			function preview(){ /* Анимация на превью*/
+				var nextPreview = previews.eq(indexPreview);
+
+				activePreview.animate({opacity: 0}, 300);  /*Скрываем предыдущий слайд*/
+				nextPreview.animate({opacity: 1}, 300, function (){ /*отображаем новый слайд*/
+					activePreview.removeClass('slider__item_active'); /*Удаляем старому активному классу активный класс*/
+					nextPreview.addClass('slider__item_active'); /*добавляем активный класс след. слайду*/
+				});
+			}
+
+
+			function descriptionSlide(){  /*Описание превью*/
+				 var descriptionContainer = slider.find('.slider__description'), /*Находим контейнер с описанием слайда*/
+  					 descriptionTitle = descriptionContainer.find('.description__title'), /*Находим заголовок слайда*/
+  					 descriptionSkillContainer = descriptionContainer.find('.description__skill'), /*Находим контейнер со скилами*/
+  					 descriptionSkillList = descriptionSkillContainer.find('.skill__list'),
+  					 descriptionSkillItem = descriptionSkillList.find('.skill__item'),
+  					 decriptionLink = descriptionContainer.find('.description__btn').find('.slider__link');
+
+  				descriptionTitle.text(works[indexPreview].title); /* передаем с переменной Title активного слайда*/
+  				decriptionLink.attr('href', works[indexPreview].link); /*передаем Link активного слайда*/
+  				(function(){
+  					var i;
+  					for (i=0; i<works[indexPreview].skill.length; i++) {
+  						console.log(works[indexPreview].skill[i]);
+  						// descriptionSkillItem[i].text(works[indexPreview].skill[i]);
+  					}
+  				})();
+			}
+		
+
+			moveSlide();
+			preview();
+			descriptionSlide();
+			noAnimate();
+		});
+
+	}
+
+	}
+}());
+
+
+$(document).ready(function() {
+	if ($('.slider__container').length) {
+		slider.init();
+	}
+});

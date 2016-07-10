@@ -1,10 +1,11 @@
 .reviews
-	background: url(../img/bg2.jpg)
-	background-repeat: no-repeat
-	background-position: center bottom
-	background-size: 120%
+	// background: url(../img/bg2.jpg)
+	// background-repeat: no-repeat
+	// background-position: center center
+	// background-size: 2000px
 	// background-size: cover
 	padding: rem(20px) 0 rem(150px)
+	overflow: hidden
 	position: relative
 	// z-index: 100
 	+breakpoint(max-width 480px)
@@ -14,12 +15,23 @@
 		padding: 0
 		padding-bottom: 400px
 .reviews__container
+	// min-height: 100%
+	// // width: 100%
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	min-width: 900px
 	+breakpoint(max-width 480px)
 		box-sizing: border-box
 		padding: rem(15px) rem(10px)
 	+breakpoint((482px 768px) (orientation portrait))
 		box-sizing: border-box
 		padding: rem(15px) rem(10px)
+.img__bg
+	display: block
+	width: 100%
 .reviews__title
 	max-width: rem(450px)
 	position: relative
@@ -141,8 +153,6 @@
 	
 
 .contact-with-me
-
-	// background-size: cover
 	max-width: rem(380px)
 	min-height: rem(460px)
 	background-color: rgba(#e0e0dc, .6)
@@ -153,16 +163,13 @@
 	+breakpoint(max-width 480px)
 
 .blur__bg
-	// width: 100%
-	// height: 100%
+	width: 100%
+	height: 100%
 	background-image: url(../img/bg2.jpg)
 	background-repeat: no-repeat
-	background-position: center bottom
-	// background-size: 120%
-	// width: 100%
-	// height: 100%
-	// filter: blur(20px)
-	// -webkit-filter: blur(20px)
+	background-position: center center
+	filter: blur(10px)
+	-webkit-filter: blur(10px)
 	position: absolute
 	bottom: 0
 	top: 0
